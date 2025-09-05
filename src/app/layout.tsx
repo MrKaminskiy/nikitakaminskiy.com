@@ -11,6 +11,11 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Nikita Kaminskiy",
   description: "I automate business processes with AI to save time and money for SMBs.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
