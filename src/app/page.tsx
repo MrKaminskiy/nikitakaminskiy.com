@@ -14,11 +14,11 @@ export default function Home() {
                 <div className="flex items-center gap-4 text-sm">
                   <span className="flex items-center gap-1">
                     <span>📍</span>
-                    Berlin
+                    <span className="font-bold">Berlin</span>
                   </span>
                   <span className="flex items-center gap-1">
-                    <span>💰</span>
-                    €4k/month
+                    <span>🤖</span>
+                    <span className="font-bold">AI my ass</span>
                   </span>
                 </div>
               </div>
@@ -47,15 +47,15 @@ export default function Home() {
                 Nikita Kaminskiy
               </h1>
 
-              {/* Location and Revenue */}
+              {/* Location and Fun Fact */}
               <div className="flex items-center gap-6">
                 <p className="text-custom-primary flex items-center gap-2">
                   <span>📍</span>
-                  Berlin
+                  <span className="font-bold">Berlin</span>
                 </p>
                 <p className="text-custom-primary flex items-center gap-2">
-                  <span>💰</span>
-                  €4k/month
+                  <span>🤖</span>
+                  <span className="font-bold">AI my ass</span>
                 </p>
               </div>
             </div>
