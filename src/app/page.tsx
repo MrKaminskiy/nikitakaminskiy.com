@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -8,11 +7,9 @@ export default function Home() {
         <div className="w-2/5 p-12 pt-20 flex flex-col justify-start space-y-8">
             {/* Profile Photo */}
             <div className="w-32 h-32 rounded-full overflow-hidden">
-              <Image
+              <img
                 src="/images/profile.svg"
                 alt="Nikita Kaminskiy"
-                width={128}
-                height={128}
                 className="w-full h-full object-cover"
               />
             </div>
