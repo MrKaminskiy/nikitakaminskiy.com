@@ -34,7 +34,7 @@ export default function Home() {
             {/* Desktop: Original layout */}
             <div className="hidden lg:block">
               {/* Profile Photo */}
-              <div className="w-40 h-40 rounded-full overflow-hidden">
+              <div className="w-40 h-40 rounded-full overflow-hidden mb-6">
                 <img
                   src="/images/profile.jpg"
                   alt="Nikita Kaminskiy"
