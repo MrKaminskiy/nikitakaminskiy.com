@@ -9,7 +9,7 @@ export default function Home() {
             {/* Profile Photo */}
             <div className="w-32 h-32 rounded-full overflow-hidden">
               <Image
-                src="/images/profile-placeholder.svg"
+                src="/images/profile.jpg"
                 alt="Nikita Kaminskiy"
                 width={128}
                 height={128}
@@ -103,103 +103,123 @@ export default function Home() {
         <div className="w-3/5 overflow-y-auto p-12">
           <div className="grid grid-cols-2 gap-6">
           {/* Project 1 */}
-          <div className="flex flex-col items-center text-center p-6 hover:bg-custom-hover rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            <div className="w-16 h-16 bg-custom-accent rounded-lg flex items-center justify-center mb-4">
-              <span className="text-custom-primary font-bold text-xl">CRM</span>
+          <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-200">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-custom-accent rounded flex items-center justify-center">
+                <span className="text-custom-primary font-bold text-sm">CRM</span>
+              </div>
+              <div className="font-bold text-custom-primary">CRM-бот</div>
             </div>
-            <div className="font-semibold text-xl text-custom-primary mb-2">CRM-бот</div>
-            <div className="text-sm text-custom-primary mb-3">Telegram bot integrated with Bitrix24</div>
-            <div className="text-xl font-semibold text-custom-accent">€1.2k/mo</div>
+            <div className="text-sm text-custom-primary mb-2">Telegram bot integrated with Bitrix24</div>
+            <div className="text-sm font-semibold text-custom-accent">€1.2k/mo</div>
           </div>
 
           {/* Project 2 */}
-          <div className="flex flex-col items-center text-center p-6 hover:bg-custom-hover rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            <div className="w-16 h-16 bg-custom-accent rounded-lg flex items-center justify-center mb-4">
-              <span className="text-custom-primary font-bold text-xl">AI</span>
+          <div className="bg-white p-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-custom-accent rounded flex items-center justify-center">
+                <span className="text-custom-primary font-bold text-sm">AI</span>
+              </div>
+              <div className="font-bold text-custom-primary">Email-автоответ</div>
             </div>
-            <div className="font-semibold text-xl text-custom-primary mb-2">Email-автоответ</div>
-            <div className="text-sm text-custom-primary mb-3">GPT bot for lead responses</div>
-            <div className="text-xl font-semibold text-custom-accent">€800/mo</div>
+            <div className="text-sm text-custom-primary mb-2">GPT bot for lead responses</div>
+            <div className="text-sm font-semibold text-custom-accent">€800/mo</div>
           </div>
 
           {/* Project 3 */}
-          <div className="flex flex-col items-center text-center p-6 hover:bg-custom-hover rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            <div className="w-16 h-16 bg-custom-accent rounded-lg flex items-center justify-center mb-4">
-              <span className="text-custom-primary font-bold text-xl">RPT</span>
+          <div className="bg-white p-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-custom-accent rounded flex items-center justify-center">
+                <span className="text-custom-primary font-bold text-sm">RPT</span>
+              </div>
+              <div className="font-bold text-custom-primary">Отчетчик</div>
             </div>
-            <div className="font-semibold text-xl text-custom-primary mb-2">Отчетчик</div>
-            <div className="text-sm text-custom-primary mb-3">Excel to Google Sheets automation</div>
-            <div className="text-xl font-semibold text-custom-accent">€600/mo</div>
+            <div className="text-sm text-custom-primary mb-2">Excel to Google Sheets automation</div>
+            <div className="text-sm font-semibold text-custom-accent">€600/mo</div>
           </div>
 
           {/* Project 4 */}
-          <div className="flex flex-col items-center text-center p-6 hover:bg-custom-hover rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            <div className="w-16 h-16 bg-custom-accent rounded-lg flex items-center justify-center mb-4">
-              <span className="text-custom-primary font-bold text-xl">API</span>
+          <div className="bg-white p-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-custom-accent rounded flex items-center justify-center">
+                <span className="text-custom-primary font-bold text-sm">API</span>
+              </div>
+              <div className="font-bold text-custom-primary">API Integration</div>
             </div>
-            <div className="font-semibold text-lg text-custom-primary mb-2">API Integration</div>
-            <div className="text-sm text-custom-primary mb-3">Custom API connections for businesses</div>
-            <div className="text-xl font-semibold text-custom-accent">€700/mo</div>
+            <div className="text-sm text-custom-primary mb-2">Custom API connections for businesses</div>
+            <div className="text-sm font-semibold text-custom-accent">€700/mo</div>
           </div>
 
           {/* Project 5 */}
-          <div className="flex flex-col items-center text-center p-6 hover:bg-custom-hover rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            <div className="w-16 h-16 bg-custom-accent rounded-lg flex items-center justify-center mb-4">
-              <span className="text-custom-primary font-bold text-xl">WF</span>
+          <div className="bg-white p-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-custom-accent rounded flex items-center justify-center">
+                <span className="text-custom-primary font-bold text-sm">WF</span>
+              </div>
+              <div className="font-bold text-custom-primary">Workflow Automation</div>
             </div>
-            <div className="font-semibold text-lg text-custom-primary mb-2">Workflow Automation</div>
-            <div className="text-sm text-custom-primary mb-3">Zapier and custom workflow solutions</div>
-            <div className="text-xl font-semibold text-custom-accent">€500/mo</div>
+            <div className="text-sm text-custom-primary mb-2">Zapier and custom workflow solutions</div>
+            <div className="text-sm font-semibold text-custom-accent">€500/mo</div>
           </div>
 
           {/* Project 6 */}
-          <div className="flex flex-col items-center text-center p-6 hover:bg-custom-hover rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            <div className="w-16 h-16 bg-custom-accent rounded-lg flex items-center justify-center mb-4">
-              <span className="text-custom-primary font-bold text-xl">DB</span>
+          <div className="bg-white p-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-custom-accent rounded flex items-center justify-center">
+                <span className="text-custom-primary font-bold text-sm">DB</span>
+              </div>
+              <div className="font-bold text-custom-primary">Database Sync</div>
             </div>
-            <div className="font-semibold text-lg text-custom-primary mb-2">Database Sync</div>
-            <div className="text-sm text-custom-primary mb-3">Real-time data synchronization</div>
-            <div className="text-xl font-semibold text-custom-accent">€200/mo</div>
+            <div className="text-sm text-custom-primary mb-2">Real-time data synchronization</div>
+            <div className="text-sm font-semibold text-custom-accent">€200/mo</div>
           </div>
 
           {/* Project 7 */}
-          <div className="flex flex-col items-center text-center p-6 hover:bg-custom-hover rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            <div className="w-16 h-16 bg-custom-accent rounded-lg flex items-center justify-center mb-4">
-              <span className="text-custom-primary font-bold text-xl">CHAT</span>
+          <div className="bg-white p-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-custom-accent rounded flex items-center justify-center">
+                <span className="text-custom-primary font-bold text-sm">CHAT</span>
+              </div>
+              <div className="font-bold text-custom-primary">Chatbot Integration</div>
             </div>
-            <div className="font-semibold text-lg text-custom-primary mb-2">Chatbot Integration</div>
-            <div className="text-sm text-custom-primary mb-3">AI-powered customer support</div>
-            <div className="text-xl font-semibold text-custom-accent">€350/mo</div>
+            <div className="text-sm text-custom-primary mb-2">AI-powered customer support</div>
+            <div className="text-sm font-semibold text-custom-accent">€350/mo</div>
           </div>
 
           {/* Project 8 */}
-          <div className="flex flex-col items-center text-center p-6 hover:bg-custom-hover rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            <div className="w-16 h-16 bg-custom-accent rounded-lg flex items-center justify-center mb-4">
-              <span className="text-custom-primary font-bold text-xl">WEB</span>
+          <div className="bg-white p-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-custom-accent rounded flex items-center justify-center">
+                <span className="text-custom-primary font-bold text-sm">WEB</span>
+              </div>
+              <div className="font-bold text-custom-primary">Web Scraping</div>
             </div>
-            <div className="font-semibold text-lg text-custom-primary mb-2">Web Scraping</div>
-            <div className="text-sm text-custom-primary mb-3">Automated data collection</div>
-            <div className="text-xl font-semibold text-custom-accent">€150/mo</div>
+            <div className="text-sm text-custom-primary mb-2">Automated data collection</div>
+            <div className="text-sm font-semibold text-custom-accent">€150/mo</div>
           </div>
 
           {/* Project 9 */}
-          <div className="flex flex-col items-center text-center p-6 hover:bg-custom-hover rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            <div className="w-16 h-16 bg-custom-accent rounded-lg flex items-center justify-center mb-4">
-              <span className="text-custom-primary font-bold text-xl">ML</span>
+          <div className="bg-white p-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-custom-accent rounded flex items-center justify-center">
+                <span className="text-custom-primary font-bold text-sm">ML</span>
+              </div>
+              <div className="font-bold text-custom-primary">ML Pipeline</div>
             </div>
-            <div className="font-semibold text-lg text-custom-primary mb-2">ML Pipeline</div>
-            <div className="text-sm text-custom-primary mb-3">Machine learning automation</div>
-            <div className="text-xl font-semibold text-custom-accent">€900/mo</div>
+            <div className="text-sm text-custom-primary mb-2">Machine learning automation</div>
+            <div className="text-sm font-semibold text-custom-accent">€900/mo</div>
           </div>
 
           {/* Project 10 */}
-          <div className="flex flex-col items-center text-center p-6 hover:bg-custom-hover rounded-xl transition-all duration-200 shadow-sm hover:shadow-md">
-            <div className="w-16 h-16 bg-custom-accent rounded-lg flex items-center justify-center mb-4">
-              <span className="text-custom-primary font-bold text-xl">CLOUD</span>
+          <div className="bg-white p-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-custom-accent rounded flex items-center justify-center">
+                <span className="text-custom-primary font-bold text-sm">CLOUD</span>
+              </div>
+              <div className="font-bold text-custom-primary">Cloud Migration</div>
             </div>
-            <div className="font-semibold text-lg text-custom-primary mb-2">Cloud Migration</div>
-            <div className="text-sm text-custom-primary mb-3">AWS/Azure infrastructure setup</div>
-            <div className="text-xl font-semibold text-custom-accent">€1.1k/mo</div>
+            <div className="text-sm text-custom-primary mb-2">AWS/Azure infrastructure setup</div>
+            <div className="text-sm font-semibold text-custom-accent">€1.1k/mo</div>
           </div>
           </div>
         </div>
