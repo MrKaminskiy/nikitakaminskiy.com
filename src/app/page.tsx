@@ -3,10 +3,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black">
-      <main className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column - Personal Info */}
-          <div className="space-y-6">
+      <main className="flex h-screen">
+        {/* Left Column - Personal Info (40% width, fixed) */}
+        <div className="w-2/5 p-8 flex flex-col justify-center space-y-6">
             {/* Profile Photo */}
             <div className="w-20 h-20 rounded-full overflow-hidden">
               <Image
@@ -69,7 +68,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Column - Projects Grid */}
+        {/* Right Column - Projects Grid (60% width, scrollable) */}
+        <div className="w-3/5 overflow-y-auto p-8">
           <div className="space-y-4">
           {/* Project 1 */}
           <div className="flex items-center space-x-3 p-4 hover:bg-gray-50 rounded-lg transition-colors">
@@ -141,6 +141,54 @@ export default function Home() {
               <div className="text-sm text-gray-600">Real-time data synchronization</div>
             </div>
             <div className="text-sm font-medium text-green-600">€200/mo</div>
+          </div>
+
+          {/* Project 7 */}
+          <div className="flex items-center space-x-3 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 bg-pink-100 rounded flex items-center justify-center">
+              <span className="text-pink-600 font-bold text-sm">CHAT</span>
+            </div>
+            <div className="flex-1">
+              <div className="font-medium">Chatbot Integration</div>
+              <div className="text-sm text-gray-600">AI-powered customer support</div>
+            </div>
+            <div className="text-sm font-medium text-green-600">€350/mo</div>
+          </div>
+
+          {/* Project 8 */}
+          <div className="flex items-center space-x-3 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 bg-yellow-100 rounded flex items-center justify-center">
+              <span className="text-yellow-600 font-bold text-sm">WEB</span>
+            </div>
+            <div className="flex-1">
+              <div className="font-medium">Web Scraping</div>
+              <div className="text-sm text-gray-600">Automated data collection</div>
+            </div>
+            <div className="text-sm font-medium text-green-600">€150/mo</div>
+          </div>
+
+          {/* Project 9 */}
+          <div className="flex items-center space-x-3 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 bg-teal-100 rounded flex items-center justify-center">
+              <span className="text-teal-600 font-bold text-sm">ML</span>
+            </div>
+            <div className="flex-1">
+              <div className="font-medium">ML Pipeline</div>
+              <div className="text-sm text-gray-600">Machine learning automation</div>
+            </div>
+            <div className="text-sm font-medium text-green-600">€900/mo</div>
+          </div>
+
+          {/* Project 10 */}
+          <div className="flex items-center space-x-3 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 bg-cyan-100 rounded flex items-center justify-center">
+              <span className="text-cyan-600 font-bold text-sm">CLOUD</span>
+            </div>
+            <div className="flex-1">
+              <div className="font-medium">Cloud Migration</div>
+              <div className="text-sm text-gray-600">AWS/Azure infrastructure setup</div>
+            </div>
+            <div className="text-sm font-medium text-green-600">€1.1k/mo</div>
           </div>
           </div>
         </div>
