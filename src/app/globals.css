@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* Custom color palette */
+:root {
+  --bg-primary: #D5E1E7;
+  --accent: #67E8FA;
+  --text-primary: #22282A;
+  --text-secondary: #92A5B0;
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-feature-settings: "kern" 1;
@@ -56,6 +64,31 @@ body {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+/* Custom color classes */
+.bg-custom-primary {
+  background-color: var(--bg-primary);
+}
+
+.text-custom-primary {
+  color: var(--text-primary);
+}
+
+.text-custom-secondary {
+  color: var(--text-secondary);
+}
+
+.text-custom-accent {
+  color: var(--accent);
+}
+
+.bg-custom-accent {
+  background-color: var(--accent);
+}
+
+.hover\:bg-custom-hover:hover {
+  background-color: #c7d6dd;
 }
 
 /* Enhanced shadows */
