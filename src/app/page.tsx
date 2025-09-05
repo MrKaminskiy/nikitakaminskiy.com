@@ -6,7 +6,7 @@ export default function Home() {
         {/* Left Column - Personal Info (40% width, fixed) */}
         <div className="w-2/5 p-12 pt-20 flex flex-col justify-start space-y-8">
             {/* Profile Photo */}
-            <div className="w-32 h-32 rounded-full overflow-hidden">
+            <div className="w-40 h-40 rounded-full overflow-hidden">
               <img
                 src="/images/profile.jpg"
                 alt="Nikita Kaminskiy"
