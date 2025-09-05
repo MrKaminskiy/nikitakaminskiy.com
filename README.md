@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nikita Kaminskiy - Portfolio
 
-## Getting Started
+Минималистичный лендинг-портфолио для AI automation engineer.
 
-First, run the development server:
+## Особенности
+
+- ✅ Минималистичный дизайн в стиле marclou.com
+- ✅ Монохромная цветовая схема (белый фон, черный/серый текст)
+- ✅ System-ui шрифт для аккуратного отображения
+- ✅ Адаптивный дизайн для десктопа и мобильных устройств
+- ✅ Секция статистики с ключевыми метриками
+- ✅ Карточки проектов с результатами
+- ✅ Контактная информация
+
+## Структура
+
+- **Заголовок**: Имя и манифест
+- **Статистика**: €4k/mo, 15+ проектов, 3 года опыта
+- **Проекты**: 3 карточки с описанием и результатами
+- **Контакты**: Email, Telegram, LinkedIn
+
+## Технологии
+
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- System-ui шрифт
+
+## Запуск локально
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Деплой
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Vercel (рекомендуется)
 
-## Learn More
+1. Подключите репозиторий к Vercel
+2. Настройте домен `nikitakaminskiy.com`
+3. Деплой произойдет автоматически при push в main
 
-To learn more about Next.js, take a look at the following resources:
+### Настройка
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Замена фото профиля
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Замените файл `/public/images/profile-placeholder.svg` на ваше фото:
+- Размер: 96x96px
+- Формат: JPG, PNG или SVG
+- Обновите путь в `src/app/page.tsx`
 
-## Deploy on Vercel
+#### Обновление контактов
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Измените ссылки в секции контактов в `src/app/page.tsx`:
+- Email
+- Telegram
+- LinkedIn
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Обновление проектов
+
+Добавьте или измените проекты в секции "Projects" в `src/app/page.tsx`
