@@ -5,30 +5,59 @@ export default function Home() {
       <main className="flex flex-col lg:flex-row min-h-screen lg:h-screen">
         {/* Left Column - Personal Info (40% width on desktop, full width on mobile) */}
         <div className="w-full lg:w-2/5 p-6 lg:p-12 flex flex-col justify-start space-y-4">
-            {/* Profile Photo */}
-            <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden">
-              <img
-                src="/images/profile.jpg"
-                alt="Nikita Kaminskiy"
-                className="w-full h-full object-cover scale-150"
-              />
+            {/* Mobile: Compact header with photo on right */}
+            <div className="flex lg:hidden items-center gap-4 mb-4">
+              <div className="flex-1">
+                <h1 className="text-2xl font-bold mb-1">
+                  Nikita Kaminskiy
+                </h1>
+                <div className="flex items-center gap-4 text-sm">
+                  <span className="flex items-center gap-1">
+                    <span>📍</span>
+                    Berlin
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span>💰</span>
+                    €4k/month
+                  </span>
+                </div>
+              </div>
+              <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                <img
+                  src="/images/profile.jpg"
+                  alt="Nikita Kaminskiy"
+                  className="w-full h-full object-cover scale-150"
+                />
+              </div>
             </div>
 
-            {/* Name */}
-            <h1 className="text-3xl lg:text-4xl font-bold">
-              Nikita Kaminskiy
-            </h1>
+            {/* Desktop: Original layout */}
+            <div className="hidden lg:block">
+              {/* Profile Photo */}
+              <div className="w-40 h-40 rounded-full overflow-hidden">
+                <img
+                  src="/images/profile.jpg"
+                  alt="Nikita Kaminskiy"
+                  className="w-full h-full object-cover scale-150"
+                />
+              </div>
 
-            {/* Location and Revenue */}
-            <div className="flex items-center gap-6">
-              <p className="text-custom-primary flex items-center gap-2">
-                <span>📍</span>
-                Berlin
-              </p>
-              <p className="text-custom-primary flex items-center gap-2">
-                <span>💰</span>
-                €4k/month
-              </p>
+              {/* Name */}
+              <h1 className="text-4xl font-bold">
+                Nikita Kaminskiy
+              </h1>
+
+              {/* Location and Revenue */}
+              <div className="flex items-center gap-6">
+                <p className="text-custom-primary flex items-center gap-2">
+                  <span>📍</span>
+                  Berlin
+                </p>
+                <p className="text-custom-primary flex items-center gap-2">
+                  <span>💰</span>
+                  €4k/month
+                </p>
+              </div>
             </div>
 
             {/* Manifest */}
