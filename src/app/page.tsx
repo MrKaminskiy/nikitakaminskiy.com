@@ -2,11 +2,11 @@
 export default function Home() {
   return (
     <div className="min-h-screen bg-custom-primary text-custom-primary">
-      <main className="flex h-screen">
-        {/* Left Column - Personal Info (40% width, fixed) */}
-        <div className="w-2/5 p-12 flex flex-col justify-start space-y-6">
+      <main className="flex flex-col lg:flex-row min-h-screen lg:h-screen">
+        {/* Left Column - Personal Info (40% width on desktop, full width on mobile) */}
+        <div className="w-full lg:w-2/5 p-6 lg:p-12 flex flex-col justify-start space-y-6">
             {/* Profile Photo */}
-            <div className="w-40 h-40 rounded-full overflow-hidden">
+            <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden">
               <img
                 src="/images/profile.jpg"
                 alt="Nikita Kaminskiy"
@@ -15,7 +15,7 @@ export default function Home() {
             </div>
 
             {/* Name */}
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-3xl lg:text-4xl font-bold">
               Nikita Kaminskiy
             </h1>
 
@@ -32,16 +32,16 @@ export default function Home() {
             </div>
 
             {/* Manifest */}
-            <p className="text-xl italic text-custom-primary leading-relaxed">
+            <p className="text-lg lg:text-xl italic text-custom-primary leading-relaxed">
               &ldquo;I automate business processes with AI to save time and money for SMBs.&rdquo;
             </p>
 
             {/* Stats */}
             <div>
-              <p className="text-xl font-semibold text-custom-primary">
+              <p className="text-lg lg:text-xl font-semibold text-custom-primary">
                 15+ entrepreneurs automated their workflows:
               </p>
-              <p className="text-custom-primary mt-2">
+              <p className="text-custom-primary mt-2 text-sm lg:text-base">
                 I help businesses find automation opportunities, implement AI solutions, and get profitable
               </p>
             </div>
@@ -96,9 +96,9 @@ export default function Home() {
             </div>
           </div>
 
-        {/* Right Column - Projects Grid (60% width, scrollable) */}
-        <div className="w-3/5 overflow-y-auto p-12">
-          <div className="grid grid-cols-2 gap-6">
+        {/* Right Column - Projects Grid (60% width on desktop, full width on mobile) */}
+        <div className="w-full lg:w-3/5 overflow-y-auto p-6 lg:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Project 1 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
