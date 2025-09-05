@@ -141,15 +141,15 @@ export default function Home() {
         {/* Right Column - Projects Grid (60% width on desktop, full width on mobile) */}
         <div className="w-full lg:w-3/5 overflow-y-auto p-6 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Project 1 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          {/* Project 1 - RecaPuccino */}
+          <a href="https://recapuccino-production.up.railway.app" target="_blank" rel="noopener noreferrer" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">📊</span>
+                <span className="text-gray-500 font-bold text-xs">☕</span>
               </div>
-              <div className="font-bold text-custom-primary">CRM-бот</div>
+              <div className="font-bold text-custom-primary">RecaPuccino</div>
             </div>
-            <div className="text-sm text-custom-primary">Telegram bot integrated with Bitrix24</div>
+            <div className="text-sm text-custom-primary">Movie recap generator powered by AI</div>
           </a>
 
           {/* Project 2 */}
