@@ -3,42 +3,74 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black">
-      <main className="max-w-4xl mx-auto px-6 py-12">
-        {/* Profile Photo */}
-        <div className="mb-8">
-          <div className="w-20 h-20 rounded-full mx-auto mb-6 overflow-hidden">
-            <Image
-              src="/images/profile-placeholder.svg"
-              alt="Nikita Kaminskiy"
-              width={80}
-              height={80}
-              className="w-full h-full object-cover"
-            />
+      <main className="max-w-6xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Column - Personal Info */}
+          <div className="space-y-6">
+            {/* Profile Photo */}
+            <div className="w-20 h-20 rounded-full overflow-hidden">
+              <Image
+                src="/images/profile-placeholder.svg"
+                alt="Nikita Kaminskiy"
+                width={80}
+                height={80}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Name */}
+            <h1 className="text-3xl font-bold">
+              Nikita Kaminskiy
+            </h1>
+
+            {/* Location */}
+            <p className="text-gray-600">
+              Remote
+            </p>
+
+            {/* Revenue */}
+            <p className="text-2xl font-bold">
+              €4k/month
+            </p>
+
+            {/* Manifest */}
+            <p className="text-lg italic text-gray-700">
+              I automate business processes with AI to save time and money for SMBs.
+            </p>
+
+            {/* Contact Section */}
+            <div className="pt-8">
+              <div className="flex space-x-6 text-sm">
+                <a 
+                  href="mailto:nikita@example.com" 
+                  className="text-gray-600 hover:text-black transition-colors"
+                >
+                  Email
+                </a>
+                <a 
+                  href="https://t.me/nikita_kaminskiy" 
+                  className="text-gray-600 hover:text-black transition-colors"
+                >
+                  Telegram
+                </a>
+                <a 
+                  href="https://linkedin.com/in/nikita-kaminskiy" 
+                  className="text-gray-600 hover:text-black transition-colors"
+                >
+                  LinkedIn
+                </a>
+                <a 
+                  href="https://twitter.com/nikita_kaminskiy" 
+                  className="text-gray-600 hover:text-black transition-colors"
+                >
+                  Twitter
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Name */}
-        <h1 className="text-3xl font-bold text-center mb-2">
-          Nikita Kaminskiy
-        </h1>
-
-        {/* Location */}
-        <p className="text-center text-gray-600 mb-4">
-          Remote
-        </p>
-
-        {/* Revenue */}
-        <p className="text-center text-2xl font-bold mb-6">
-          €4k/month
-        </p>
-
-        {/* Manifest */}
-        <p className="text-center text-lg italic text-gray-700 mb-12 max-w-2xl mx-auto">
-          I automate business processes with AI to save time and money for SMBs.
-        </p>
-
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {/* Right Column - Projects Grid */}
+          <div className="space-y-4">
           {/* Project 1 */}
           <div className="flex items-center space-x-3 p-4 hover:bg-gray-50 rounded-lg transition-colors">
             <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center">
@@ -110,37 +142,8 @@ export default function Home() {
             </div>
             <div className="text-sm font-medium text-green-600">€200/mo</div>
           </div>
-        </div>
-
-        {/* Contact Section */}
-        <footer className="text-center pt-8 border-t border-gray-200">
-          <div className="flex justify-center space-x-6 text-sm">
-            <a 
-              href="mailto:nikita@example.com" 
-              className="text-gray-600 hover:text-black transition-colors"
-            >
-              Email
-            </a>
-            <a 
-              href="https://t.me/nikita_kaminskiy" 
-              className="text-gray-600 hover:text-black transition-colors"
-            >
-              Telegram
-            </a>
-            <a 
-              href="https://linkedin.com/in/nikita-kaminskiy" 
-              className="text-gray-600 hover:text-black transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a 
-              href="https://twitter.com/nikita_kaminskiy" 
-              className="text-gray-600 hover:text-black transition-colors"
-            >
-              Twitter
-            </a>
           </div>
-        </footer>
+        </div>
       </main>
     </div>
   );
