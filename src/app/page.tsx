@@ -6,7 +6,7 @@ export default function Home() {
         {/* Left Column - Personal Info (40% width on desktop, full width on mobile) */}
         <div className="w-full lg:w-2/5 p-6 lg:p-12 flex flex-col justify-start space-y-4">
             {/* Mobile: Compact header with photo on right */}
-            <div className="flex lg:hidden items-center gap-4 mb-4">
+            <div className="flex lg:hidden items-center gap-6 mb-4">
               <div className="flex-1">
                 <h1 className="text-2xl font-bold mb-1">
                   Nikita Kaminskiy
