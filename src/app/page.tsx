@@ -4,7 +4,7 @@ export default function Home() {
     <div className="min-h-screen bg-custom-primary text-custom-primary">
       <main className="flex flex-col lg:flex-row min-h-screen lg:h-screen">
         {/* Left Column - Personal Info (40% width on desktop, full width on mobile) */}
-        <div className="w-full lg:w-2/5 p-6 lg:p-12 flex flex-col justify-start space-y-6">
+        <div className="w-full lg:w-2/5 p-6 lg:p-12 flex flex-col justify-start space-y-4">
             {/* Profile Photo */}
             <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden">
               <img
@@ -47,8 +47,8 @@ export default function Home() {
             </div>
 
             {/* Contact Section */}
-            <div className="pt-4">
-              <div className="flex space-x-4">
+            <div className="pt-2">
+              <div className="flex space-x-3">
                 <a
                   href="mailto:nikam0811@gmail.com"
                   className="text-custom-primary hover:text-custom-accent transition-colors"
