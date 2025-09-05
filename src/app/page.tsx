@@ -103,123 +103,113 @@ export default function Home() {
         <div className="w-3/5 overflow-y-auto p-12">
           <div className="grid grid-cols-2 gap-6">
           {/* Project 1 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
                 <span className="text-custom-primary font-bold text-sm">CRM</span>
               </div>
               <div className="font-bold text-custom-primary">CRM-бот</div>
             </div>
-            <div className="text-sm text-custom-primary mb-2">Telegram bot integrated with Bitrix24</div>
-            <div className="text-sm font-semibold text-custom-accent">€1.2k/mo</div>
+            <div className="text-sm text-custom-primary">Telegram bot integrated with Bitrix24</div>
           </a>
 
           {/* Project 2 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
                 <span className="text-custom-primary font-bold text-sm">AI</span>
               </div>
               <div className="font-bold text-custom-primary">Email-автоответ</div>
             </div>
-            <div className="text-sm text-custom-primary mb-2">GPT bot for lead responses</div>
-            <div className="text-sm font-semibold text-custom-accent">€800/mo</div>
+            <div className="text-sm text-custom-primary">GPT bot for lead responses</div>
           </a>
 
           {/* Project 3 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
                 <span className="text-custom-primary font-bold text-sm">RPT</span>
               </div>
               <div className="font-bold text-custom-primary">Отчетчик</div>
             </div>
-            <div className="text-sm text-custom-primary mb-2">Excel to Google Sheets automation</div>
-            <div className="text-sm font-semibold text-custom-accent">€600/mo</div>
+            <div className="text-sm text-custom-primary">Excel to Google Sheets automation</div>
           </a>
 
           {/* Project 4 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
                 <span className="text-custom-primary font-bold text-sm">API</span>
               </div>
               <div className="font-bold text-custom-primary">API Integration</div>
             </div>
-            <div className="text-sm text-custom-primary mb-2">Custom API connections for businesses</div>
-            <div className="text-sm font-semibold text-custom-accent">€700/mo</div>
+            <div className="text-sm text-custom-primary">Custom API connections for businesses</div>
           </a>
 
           {/* Project 5 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
                 <span className="text-custom-primary font-bold text-sm">WF</span>
               </div>
               <div className="font-bold text-custom-primary">Workflow Automation</div>
             </div>
-            <div className="text-sm text-custom-primary mb-2">Zapier and custom workflow solutions</div>
-            <div className="text-sm font-semibold text-custom-accent">€500/mo</div>
+            <div className="text-sm text-custom-primary">Zapier and custom workflow solutions</div>
           </a>
 
           {/* Project 6 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
                 <span className="text-custom-primary font-bold text-sm">DB</span>
               </div>
               <div className="font-bold text-custom-primary">Database Sync</div>
             </div>
-            <div className="text-sm text-custom-primary mb-2">Real-time data synchronization</div>
-            <div className="text-sm font-semibold text-custom-accent">€200/mo</div>
+            <div className="text-sm text-custom-primary">Real-time data synchronization</div>
           </a>
 
           {/* Project 7 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
                 <span className="text-custom-primary font-bold text-sm">CHAT</span>
               </div>
               <div className="font-bold text-custom-primary">Chatbot Integration</div>
             </div>
-            <div className="text-sm text-custom-primary mb-2">AI-powered customer support</div>
-            <div className="text-sm font-semibold text-custom-accent">€350/mo</div>
+            <div className="text-sm text-custom-primary">AI-powered customer support</div>
           </a>
 
           {/* Project 8 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
                 <span className="text-custom-primary font-bold text-sm">WEB</span>
               </div>
               <div className="font-bold text-custom-primary">Web Scraping</div>
             </div>
-            <div className="text-sm text-custom-primary mb-2">Automated data collection</div>
-            <div className="text-sm font-semibold text-custom-accent">€150/mo</div>
+            <div className="text-sm text-custom-primary">Automated data collection</div>
           </a>
 
           {/* Project 9 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
                 <span className="text-custom-primary font-bold text-sm">ML</span>
               </div>
               <div className="font-bold text-custom-primary">ML Pipeline</div>
             </div>
-            <div className="text-sm text-custom-primary mb-2">Machine learning automation</div>
-            <div className="text-sm font-semibold text-custom-accent">€900/mo</div>
+            <div className="text-sm text-custom-primary">Machine learning automation</div>
           </a>
 
           {/* Project 10 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
                 <span className="text-custom-primary font-bold text-sm">CLOUD</span>
               </div>
               <div className="font-bold text-custom-primary">Cloud Migration</div>
             </div>
-            <div className="text-sm text-custom-primary mb-2">AWS/Azure infrastructure setup</div>
-            <div className="text-sm font-semibold text-custom-accent">€1.1k/mo</div>
+            <div className="text-sm text-custom-primary">AWS/Azure infrastructure setup</div>
           </a>
           </div>
         </div>
