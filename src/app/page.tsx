@@ -5,7 +5,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <main className="flex h-screen">
         {/* Left Column - Personal Info (40% width, fixed) */}
-        <div className="w-2/5 p-12 flex flex-col justify-center space-y-8">
+        <div className="w-2/5 p-12 pt-20 flex flex-col justify-start space-y-8">
             {/* Profile Photo */}
             <div className="w-32 h-32 rounded-full overflow-hidden">
               <Image
