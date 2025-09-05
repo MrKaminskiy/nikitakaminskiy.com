@@ -4,7 +4,7 @@ export default function Home() {
     <div className="min-h-screen bg-custom-primary text-custom-primary">
       <main className="flex h-screen">
         {/* Left Column - Personal Info (40% width, fixed) */}
-        <div className="w-2/5 p-12 flex flex-col justify-start space-y-8">
+        <div className="w-2/5 p-12 flex flex-col justify-start space-y-6">
             {/* Profile Photo */}
             <div className="w-40 h-40 rounded-full overflow-hidden">
               <img
@@ -47,8 +47,8 @@ export default function Home() {
             </div>
 
             {/* Contact Section */}
-            <div className="pt-8">
-              <div className="flex space-x-6">
+            <div className="pt-4">
+              <div className="flex space-x-4">
                 <a
                   href="mailto:nikam0811@gmail.com"
                   className="text-custom-primary hover:text-custom-accent transition-colors"
@@ -102,8 +102,8 @@ export default function Home() {
           {/* Project 1 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
-                <span className="text-custom-primary font-bold text-sm">CRM</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 font-bold text-xs">📊</span>
               </div>
               <div className="font-bold text-custom-primary">CRM-бот</div>
             </div>
@@ -113,8 +113,8 @@ export default function Home() {
           {/* Project 2 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
-                <span className="text-custom-primary font-bold text-sm">AI</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 font-bold text-xs">🤖</span>
               </div>
               <div className="font-bold text-custom-primary">Email-автоответ</div>
             </div>
@@ -124,8 +124,8 @@ export default function Home() {
           {/* Project 3 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
-                <span className="text-custom-primary font-bold text-sm">RPT</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 font-bold text-xs">📈</span>
               </div>
               <div className="font-bold text-custom-primary">Отчетчик</div>
             </div>
@@ -135,8 +135,8 @@ export default function Home() {
           {/* Project 4 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
-                <span className="text-custom-primary font-bold text-sm">API</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 font-bold text-xs">🔗</span>
               </div>
               <div className="font-bold text-custom-primary">API Integration</div>
             </div>
@@ -146,8 +146,8 @@ export default function Home() {
           {/* Project 5 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
-                <span className="text-custom-primary font-bold text-sm">WF</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 font-bold text-xs">⚡</span>
               </div>
               <div className="font-bold text-custom-primary">Workflow Automation</div>
             </div>
@@ -157,8 +157,8 @@ export default function Home() {
           {/* Project 6 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
-                <span className="text-custom-primary font-bold text-sm">DB</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 font-bold text-xs">🗄️</span>
               </div>
               <div className="font-bold text-custom-primary">Database Sync</div>
             </div>
@@ -168,8 +168,8 @@ export default function Home() {
           {/* Project 7 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
-                <span className="text-custom-primary font-bold text-sm">CHAT</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 font-bold text-xs">💬</span>
               </div>
               <div className="font-bold text-custom-primary">Chatbot Integration</div>
             </div>
@@ -179,8 +179,8 @@ export default function Home() {
           {/* Project 8 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
-                <span className="text-custom-primary font-bold text-sm">WEB</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 font-bold text-xs">🕷️</span>
               </div>
               <div className="font-bold text-custom-primary">Web Scraping</div>
             </div>
@@ -190,8 +190,8 @@ export default function Home() {
           {/* Project 9 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
-                <span className="text-custom-primary font-bold text-sm">ML</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 font-bold text-xs">🧠</span>
               </div>
               <div className="font-bold text-custom-primary">ML Pipeline</div>
             </div>
@@ -201,8 +201,8 @@ export default function Home() {
           {/* Project 10 */}
           <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-custom-accent rounded-full flex items-center justify-center">
-                <span className="text-custom-primary font-bold text-sm">CLOUD</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                <span className="text-gray-500 font-bold text-xs">☁️</span>
               </div>
               <div className="font-bold text-custom-primary">Cloud Migration</div>
             </div>
