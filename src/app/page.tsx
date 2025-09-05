@@ -8,7 +8,7 @@ export default function Home() {
             {/* Profile Photo */}
             <div className="w-32 h-32 rounded-full overflow-hidden">
               <img
-                src="/images/profile.svg"
+                src="/images/profile.jpg"
                 alt="Nikita Kaminskiy"
                 className="w-full h-full object-cover"
               />
