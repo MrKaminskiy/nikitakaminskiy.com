@@ -152,15 +152,15 @@ export default function Home() {
             <div className="text-sm text-custom-primary">Movie recap generator powered by AI</div>
           </a>
 
-          {/* Project 2 */}
-          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          {/* Project 2 - OmniBoard */}
+          <a href="https://omni-board-front.vercel.app/" target="_blank" rel="noopener noreferrer" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">🤖</span>
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">📊</span>
               </div>
-              <div className="font-bold text-custom-primary">Email-автоответ</div>
+              <div className="font-bold text-custom-primary">OmniBoard</div>
             </div>
-            <div className="text-sm text-custom-primary">GPT bot for lead responses</div>
+            <div className="text-sm text-custom-primary">Crypto dashboard with market signals and journal</div>
           </a>
 
           {/* Project 3 */}
