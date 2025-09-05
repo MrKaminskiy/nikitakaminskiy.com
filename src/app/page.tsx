@@ -24,18 +24,18 @@ export default function Home() {
 
             {/* Location and Revenue */}
             <div className="flex items-center gap-6">
-              <p className="text-custom-secondary flex items-center gap-2">
+              <p className="text-custom-primary flex items-center gap-2">
                 <span>📍</span>
                 Berlin
               </p>
-              <p className="text-custom-secondary flex items-center gap-2">
+              <p className="text-custom-primary flex items-center gap-2">
                 <span>💰</span>
                 €4k/month
               </p>
             </div>
 
             {/* Manifest */}
-            <p className="text-xl italic text-custom-secondary leading-relaxed">
+            <p className="text-xl italic text-custom-primary leading-relaxed">
               &ldquo;I automate business processes with AI to save time and money for SMBs.&rdquo;
             </p>
 
@@ -44,7 +44,7 @@ export default function Home() {
               <p className="text-lg font-semibold text-custom-primary">
                 15+ entrepreneurs automated their workflows:
               </p>
-              <p className="text-custom-secondary mt-2">
+              <p className="text-custom-primary mt-2">
                 I help businesses find automation opportunities, implement AI solutions, and get profitable
               </p>
             </div>
@@ -54,7 +54,7 @@ export default function Home() {
               <div className="flex space-x-6">
                 <a
                   href="mailto:nikam0811@gmail.com"
-                  className="text-custom-secondary hover:text-custom-accent transition-colors"
+                  className="text-custom-primary hover:text-custom-accent transition-colors"
                   title="nikam0811@gmail.com"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -64,7 +64,7 @@ export default function Home() {
                 </a>
                 <a
                   href="https://t.me/prophet0811"
-                  className="text-custom-secondary hover:text-custom-accent transition-colors"
+                  className="text-custom-primary hover:text-custom-accent transition-colors"
                   title="@prophet0811"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -75,7 +75,7 @@ export default function Home() {
                 </a>
                 <a
                   href="https://www.linkedin.com/in/nikita-kaminskiy-58132424b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                  className="text-custom-secondary hover:text-custom-accent transition-colors"
+                  className="text-custom-primary hover:text-custom-accent transition-colors"
                   title="LinkedIn Profile"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -86,7 +86,7 @@ export default function Home() {
                 </a>
                 <a
                   href="https://twitter.com/T0NBigBrain"
-                  className="text-custom-secondary hover:text-custom-accent transition-colors"
+                  className="text-custom-primary hover:text-custom-accent transition-colors"
                   title="@T0NBigBrain"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -109,7 +109,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="font-semibold text-lg text-custom-primary">CRM-бот</div>
-              <div className="text-custom-secondary">Telegram bot integrated with Bitrix24</div>
+              <div className="text-custom-primary">Telegram bot integrated with Bitrix24</div>
             </div>
             <div className="text-lg font-semibold text-custom-accent">€1.2k/mo</div>
           </div>
@@ -121,7 +121,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="font-semibold text-lg text-custom-primary">Email-автоответ</div>
-              <div className="text-custom-secondary">GPT bot for lead responses</div>
+              <div className="text-custom-primary">GPT bot for lead responses</div>
             </div>
             <div className="text-lg font-semibold text-custom-accent">€800/mo</div>
           </div>
@@ -133,7 +133,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="font-semibold text-lg">Отчетчик</div>
-              <div className="text-custom-secondary">Excel to Google Sheets automation</div>
+              <div className="text-custom-primary">Excel to Google Sheets automation</div>
             </div>
             <div className="text-lg font-semibold text-custom-accent">€600/mo</div>
           </div>
@@ -145,7 +145,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="font-semibold text-lg">API Integration</div>
-              <div className="text-custom-secondary">Custom API connections for businesses</div>
+              <div className="text-custom-primary">Custom API connections for businesses</div>
             </div>
             <div className="text-lg font-semibold text-custom-accent">€700/mo</div>
           </div>
@@ -157,7 +157,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="font-semibold text-lg">Workflow Automation</div>
-              <div className="text-custom-secondary">Zapier and custom workflow solutions</div>
+              <div className="text-custom-primary">Zapier and custom workflow solutions</div>
             </div>
             <div className="text-lg font-semibold text-custom-accent">€500/mo</div>
           </div>
@@ -169,7 +169,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="font-semibold text-lg">Database Sync</div>
-              <div className="text-custom-secondary">Real-time data synchronization</div>
+              <div className="text-custom-primary">Real-time data synchronization</div>
             </div>
             <div className="text-lg font-semibold text-custom-accent">€200/mo</div>
           </div>
@@ -181,7 +181,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="font-semibold text-lg">Chatbot Integration</div>
-              <div className="text-custom-secondary">AI-powered customer support</div>
+              <div className="text-custom-primary">AI-powered customer support</div>
             </div>
             <div className="text-lg font-semibold text-custom-accent">€350/mo</div>
           </div>
@@ -193,7 +193,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="font-semibold text-lg">Web Scraping</div>
-              <div className="text-custom-secondary">Automated data collection</div>
+              <div className="text-custom-primary">Automated data collection</div>
             </div>
             <div className="text-lg font-semibold text-custom-accent">€150/mo</div>
           </div>
@@ -205,7 +205,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="font-semibold text-lg">ML Pipeline</div>
-              <div className="text-custom-secondary">Machine learning automation</div>
+              <div className="text-custom-primary">Machine learning automation</div>
             </div>
             <div className="text-lg font-semibold text-custom-accent">€900/mo</div>
           </div>
@@ -217,7 +217,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="font-semibold text-lg">Cloud Migration</div>
-              <div className="text-custom-secondary">AWS/Azure infrastructure setup</div>
+              <div className="text-custom-primary">AWS/Azure infrastructure setup</div>
             </div>
             <div className="text-lg font-semibold text-custom-accent">€1.1k/mo</div>
           </div>
