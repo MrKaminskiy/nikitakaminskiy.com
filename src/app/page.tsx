@@ -77,7 +77,7 @@ export default function Home() {
 
             {/* Contact Section */}
             <div className="pt-2">
-              <div className="flex space-x-6">
+              <div className="flex justify-center lg:justify-start space-x-6">
                 <a
                   href="mailto:nikam0811@gmail.com"
                   className="text-custom-primary hover:text-custom-accent transition-colors"
@@ -133,6 +133,8 @@ export default function Home() {
                   </svg>
                 </a>
               </div>
+              {/* Divider line for mobile */}
+              <div className="w-full h-px bg-gray-300 mt-4 lg:hidden"></div>
             </div>
           </div>
 
