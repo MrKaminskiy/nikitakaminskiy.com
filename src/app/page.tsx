@@ -10,7 +10,7 @@ export default function Home() {
               <img
                 src="/images/profile.jpg"
                 alt="Nikita Kaminskiy"
-                className="w-full h-full object-cover scale-125"
+                className="w-full h-full object-cover scale-150"
               />
             </div>
 
