@@ -142,10 +142,10 @@ export default function Home() {
         <div className="w-full lg:w-3/5 overflow-y-auto p-6 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Project 1 - RecaPuccino */}
-          <a href="https://recapuccino-production.up.railway.app" target="_blank" rel="noopener noreferrer" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          <a href="https://recapuccino-production.up.railway.app" target="_blank" rel="noopener noreferrer" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">☕</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">☕</span>
               </div>
               <div className="font-bold text-custom-primary">RecaPuccino</div>
             </div>
@@ -153,10 +153,10 @@ export default function Home() {
           </a>
 
           {/* Project 2 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">🤖</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">🤖</span>
               </div>
               <div className="font-bold text-custom-primary">Email-автоответ</div>
             </div>
@@ -164,10 +164,10 @@ export default function Home() {
           </a>
 
           {/* Project 3 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">📈</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">📈</span>
               </div>
               <div className="font-bold text-custom-primary">Отчетчик</div>
             </div>
@@ -175,10 +175,10 @@ export default function Home() {
           </a>
 
           {/* Project 4 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">🔗</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">🔗</span>
               </div>
               <div className="font-bold text-custom-primary">API Integration</div>
             </div>
@@ -186,10 +186,10 @@ export default function Home() {
           </a>
 
           {/* Project 5 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">⚡</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">⚡</span>
               </div>
               <div className="font-bold text-custom-primary">Workflow Automation</div>
             </div>
@@ -197,10 +197,10 @@ export default function Home() {
           </a>
 
           {/* Project 6 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">🗄️</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">🗄️</span>
               </div>
               <div className="font-bold text-custom-primary">Database Sync</div>
             </div>
@@ -208,10 +208,10 @@ export default function Home() {
           </a>
 
           {/* Project 7 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">💬</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">💬</span>
               </div>
               <div className="font-bold text-custom-primary">Chatbot Integration</div>
             </div>
@@ -219,10 +219,10 @@ export default function Home() {
           </a>
 
           {/* Project 8 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">🕷️</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">🕷️</span>
               </div>
               <div className="font-bold text-custom-primary">Web Scraping</div>
             </div>
@@ -230,10 +230,10 @@ export default function Home() {
           </a>
 
           {/* Project 9 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">🧠</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">🧠</span>
               </div>
               <div className="font-bold text-custom-primary">ML Pipeline</div>
             </div>
@@ -241,10 +241,10 @@ export default function Home() {
           </a>
 
           {/* Project 10 */}
-          <a href="#" className="block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
+          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 font-bold text-xs">☁️</span>
+              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">☁️</span>
               </div>
               <div className="font-bold text-custom-primary">Cloud Migration</div>
             </div>
