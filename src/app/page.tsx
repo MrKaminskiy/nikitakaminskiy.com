@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ProjectCard from "./components/ProjectCard";
 
 export default function Home() {
@@ -23,11 +24,13 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-              <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-custom-accent/20">
-                <img
+              <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-custom-accent/20 relative">
+                <Image
                   src="/images/profile.jpg"
                   alt="Nikita Kaminskiy"
-                  className="w-full h-full object-cover scale-150"
+                  fill
+                  className="object-cover scale-150"
+                  priority
                 />
               </div>
             </div>
@@ -35,11 +38,13 @@ export default function Home() {
             {/* Desktop: Original layout */}
             <div className="hidden lg:block">
               {/* Profile Photo */}
-              <div className="w-40 h-40 rounded-full overflow-hidden mb-6 ring-2 ring-custom-accent/20">
-                <img
+              <div className="w-40 h-40 rounded-full overflow-hidden mb-6 ring-2 ring-custom-accent/20 relative">
+                <Image
                   src="/images/profile.jpg"
                   alt="Nikita Kaminskiy"
-                  className="w-full h-full object-cover scale-150"
+                  fill
+                  className="object-cover scale-150"
+                  priority
                 />
               </div>
 
