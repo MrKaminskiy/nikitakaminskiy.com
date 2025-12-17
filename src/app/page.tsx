@@ -6,7 +6,7 @@ export default function Home() {
     <div className="min-h-screen bg-custom-primary text-custom-primary">
       <main className="flex flex-col lg:flex-row min-h-screen lg:h-screen">
         {/* Left Column - Personal Info (40% width on desktop, full width on mobile) */}
-        <div className="w-full lg:w-2/5 p-6 lg:p-12 flex flex-col justify-start space-y-6 border-r border-custom-border">
+        <div className="w-full lg:w-2/5 p-6 lg:p-12 flex flex-col justify-start space-y-6">
             {/* Mobile: Compact header with photo on right */}
             <div className="flex lg:hidden items-center gap-6 mb-4">
               <div className="flex-1">
@@ -154,8 +154,9 @@ export default function Home() {
               href="https://annashe.art"
               gradient="bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500"
               icon="🎨"
-              iconBg="bg-gradient-to-br from-pink-500/20 to-purple-500/20"
-              borderColor="border-pink-500/30"
+              iconBg="bg-gradient-to-br from-pink-500/30 to-purple-500/30"
+              borderColor="border-pink-500/40"
+              pattern="shimmer"
             />
 
             {/* Project 2 - Omniboard - Crypto Signals */}
@@ -165,8 +166,9 @@ export default function Home() {
               href="https://omni-board-front.vercel.app/"
               gradient="bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500"
               icon="📊"
-              iconBg="bg-gradient-to-br from-green-500/20 to-emerald-500/20"
-              borderColor="border-green-500/30"
+              iconBg="bg-gradient-to-br from-green-500/30 to-emerald-500/30"
+              borderColor="border-green-500/40"
+              pattern="glow"
             />
 
             {/* Project 3 - Services I offer */}
@@ -176,8 +178,9 @@ export default function Home() {
               href="#"
               gradient="bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500"
               icon="⚙️"
-              iconBg="bg-gradient-to-br from-blue-500/20 to-cyan-500/20"
-              borderColor="border-blue-500/30"
+              iconBg="bg-gradient-to-br from-blue-500/30 to-cyan-500/30"
+              borderColor="border-blue-500/40"
+              pattern="gradient-border"
             />
 
             {/* Project 4 - BOOKWROOM Shop */}
@@ -187,8 +190,9 @@ export default function Home() {
               href="https://bookwroom.etsy.com"
               gradient="bg-gradient-to-br from-amber-500 via-orange-500 to-red-500"
               icon="📚"
-              iconBg="bg-gradient-to-br from-amber-500/20 to-orange-500/20"
-              borderColor="border-amber-500/30"
+              iconBg="bg-gradient-to-br from-amber-500/30 to-orange-500/30"
+              borderColor="border-amber-500/40"
+              pattern="shimmer"
             />
 
             {/* Project 5 - Automated Newsletter */}
@@ -198,8 +202,9 @@ export default function Home() {
               href="#"
               gradient="bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500"
               icon="📧"
-              iconBg="bg-gradient-to-br from-violet-500/20 to-purple-500/20"
-              borderColor="border-violet-500/30"
+              iconBg="bg-gradient-to-br from-violet-500/30 to-purple-500/30"
+              borderColor="border-violet-500/40"
+              pattern="glow"
             />
 
             {/* Project 6 - Automated Content Collection */}
@@ -209,8 +214,9 @@ export default function Home() {
               href="#"
               gradient="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500"
               icon="🤖"
-              iconBg="bg-gradient-to-br from-indigo-500/20 to-blue-500/20"
-              borderColor="border-indigo-500/30"
+              iconBg="bg-gradient-to-br from-indigo-500/30 to-blue-500/30"
+              borderColor="border-indigo-500/40"
+              pattern="gradient-border"
             />
           </div>
         </div>
