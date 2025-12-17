@@ -10,6 +10,7 @@ interface ProjectCardProps {
   iconBg?: string;
   borderColor?: string;
   pattern?: "default" | "glow" | "shimmer" | "gradient-border";
+  onClick?: () => void;
 }
 
 export default function ProjectCard({
@@ -21,6 +22,7 @@ export default function ProjectCard({
   iconBg = "bg-custom-card",
   borderColor = "border-custom",
   pattern = "default",
+  onClick,
 }: ProjectCardProps) {
   const isExternal = href.startsWith("http");
   const isActive = href !== "#";
@@ -132,6 +134,10 @@ export default function ProjectCard({
     );
   }
 
-  return <div className={className}>{content}</div>;
+  return (
+    <div className={className} onClick={onClick}>
+      {content}
+    </div>
+  );
 }
 

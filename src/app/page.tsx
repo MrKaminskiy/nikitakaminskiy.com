@@ -1,7 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import ProjectCard from "./components/ProjectCard";
+import ServiceModal from "./components/ServiceModal";
 
 export default function Home() {
+  const [servicesModalOpen, setServicesModalOpen] = useState(false);
+  const [contentModalOpen, setContentModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-custom-primary text-custom-primary">
       <main className="flex flex-col lg:flex-row min-h-screen lg:h-screen">
@@ -208,6 +215,7 @@ export default function Home() {
               iconBg="bg-gradient-to-br from-blue-500/30 to-cyan-500/30"
               borderColor="border-blue-500/40"
               pattern="gradient-border"
+              onClick={() => setServicesModalOpen(true)}
             />
 
             {/* Project 4 - BOOKWROOM Shop */}
@@ -256,10 +264,59 @@ export default function Home() {
               iconBg="bg-gradient-to-br from-indigo-500/30 to-blue-500/30"
               borderColor="border-indigo-500/40"
               pattern="gradient-border"
+              onClick={() => setContentModalOpen(true)}
             />
           </div>
         </div>
       </main>
+
+      {/* Services Modal */}
+      <ServiceModal
+        isOpen={servicesModalOpen}
+        onClose={() => setServicesModalOpen(false)}
+        title="Services"
+        description="I help businesses automate their workflows, integrate systems, and implement AI-powered solutions to save time and reduce errors."
+        services={[
+          "Workflow Automation",
+          "API Integration",
+          "ChatBots & AI Assistants",
+          "CRM/ERP Automation",
+          "Email Automation",
+          "Data Synchronization",
+        ]}
+        benefits={[
+          "Save 10-30 hours per week by automating repetitive tasks",
+          "Reduce human errors with automated processes",
+          "Improve efficiency and productivity across your team",
+          "Custom solutions tailored to your specific needs",
+          "Real implementation, not just theory",
+        ]}
+        gradient="linear-gradient(135deg, #3b82f6, #06b6d4, #14b8a6)"
+      />
+
+      {/* Content Automation Modal */}
+      <ServiceModal
+        isOpen={contentModalOpen}
+        onClose={() => setContentModalOpen(false)}
+        title="Content Automation"
+        description="Automated content collection, curation, and generation system for multiple social media platforms and communication channels."
+        services={[
+          "Telegram Channel Automation",
+          "Threads Content Generation",
+          "YouTube Content Curation",
+          "Multi-platform Publishing",
+          "AI Content Creation",
+          "Content Scheduling",
+        ]}
+        benefits={[
+          "Automatically collect and curate content from multiple sources",
+          "Generate AI-powered content tailored to your audience",
+          "Schedule and publish across multiple platforms simultaneously",
+          "Maintain consistent brand voice across all channels",
+          "Save hours of manual content creation and posting",
+        ]}
+        gradient="linear-gradient(135deg, #6366f1, #3b82f6, #06b6d4)"
+      />
     </div>
   );
 }
