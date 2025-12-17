@@ -159,27 +159,30 @@ html {
   }
 }
 
-/* Shake animation for social icons */
+/* Shake animation for social icons - subtle version */
 @keyframes shake {
   0%, 100% {
-    transform: translateX(0);
+    transform: translateX(0) translateY(0);
   }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-2px) rotate(-1deg);
+  25% {
+    transform: translateX(-1px) translateY(-0.5px);
   }
-  20%, 40%, 60%, 80% {
-    transform: translateX(2px) rotate(1deg);
+  50% {
+    transform: translateX(1px) translateY(0.5px);
+  }
+  75% {
+    transform: translateX(-0.5px) translateY(0.5px);
   }
 }
 
 .animate-shake {
-  animation: shake 0.5s ease-in-out;
+  animation: shake 0.4s ease-in-out;
   animation-iteration-count: 1;
 }
 
 /* Ensure shake animation works with scale */
 .group:hover .group-hover\:animate-shake {
-  animation: shake 0.5s ease-in-out;
+  animation: shake 0.4s ease-in-out;
 }
 
 /* Gradient border support */
