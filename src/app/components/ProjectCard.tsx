@@ -23,7 +23,7 @@ export default function ProjectCard({
   const isExternal = href.startsWith("http");
   const isActive = href !== "#";
 
-  const baseClassName = `group block p-6 rounded-2xl relative overflow-hidden ${
+  const baseClassName = `group block p-4 rounded-xl relative overflow-hidden ${
     isActive ? "cursor-pointer" : "opacity-75 cursor-default"
   } transition-all duration-500`;
 
@@ -51,7 +51,7 @@ export default function ProjectCard({
     <>
       {/* Animated gradient background */}
       <div
-        className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 ${gradient} blur-xl`}
+        className={`absolute inset-0 opacity-0 group-hover:opacity-15 transition-opacity duration-500 ${gradient} blur-xl`}
       />
       
       {/* Shimmer effect for shimmer pattern */}
@@ -84,38 +84,33 @@ export default function ProjectCard({
 
       {/* Content */}
       <div className="relative z-10">
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center space-x-4 flex-1">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex items-center space-x-3 flex-1">
             <div
-              className={`w-14 h-14 rounded-2xl ${iconBg} flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg relative overflow-hidden`}
+              className={`w-11 h-11 rounded-xl ${iconBg} flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-md relative overflow-hidden flex-shrink-0`}
             >
               {/* Icon background glow */}
               <div
                 className={`absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500 ${gradient} blur-md`}
               />
-              <span className="text-3xl relative z-10 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-2xl relative z-10 group-hover:scale-110 transition-transform duration-300">
                 {icon}
               </span>
             </div>
-            <div className="flex-1">
-              <div className="font-bold text-xl text-custom-primary group-hover:text-custom-accent transition-colors duration-300 mb-1">
+            <div className="flex-1 min-w-0">
+              <div className="font-bold text-lg text-custom-primary group-hover:text-custom-primary transition-colors duration-300">
                 {title}
               </div>
-              {isActive && (
-                <div className="text-xs text-custom-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Перейти →
-                </div>
-              )}
             </div>
           </div>
         </div>
-        <div className="text-sm text-custom-secondary leading-relaxed group-hover:text-custom-primary/80 transition-colors duration-300">
+        <div className="text-sm text-custom-secondary leading-relaxed group-hover:text-custom-primary/90 transition-colors duration-300">
           {description}
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-custom-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="absolute bottom-4 right-4 w-1 h-1 rounded-full bg-custom-accent/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75" />
+        <div className="absolute top-3 right-3 w-1.5 h-1.5 rounded-full bg-custom-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute bottom-3 right-3 w-1 h-1 rounded-full bg-custom-accent/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75" />
       </div>
     </>
   );
