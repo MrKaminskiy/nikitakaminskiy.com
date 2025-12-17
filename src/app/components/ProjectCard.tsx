@@ -1,10 +1,12 @@
 // Компонент карточки проекта с индивидуальным стилем
+import { ReactNode } from "react";
+
 interface ProjectCardProps {
   title: string;
   description: string;
   href: string;
   gradient: string;
-  icon: string;
+  icon: ReactNode;
   iconBg?: string;
   borderColor?: string;
   pattern?: "default" | "glow" | "shimmer" | "gradient-border";
@@ -95,9 +97,9 @@ export default function ProjectCard({
               <div
                 className={`absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500 ${gradient} blur-md`}
               />
-              <span className="text-2xl relative z-10 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-6 h-6 relative z-10 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
                 {icon}
-              </span>
+              </div>
             </div>
             <div className="flex-1 min-w-0">
               <div className="font-bold text-lg text-custom-primary group-hover:text-custom-primary transition-colors duration-300">
