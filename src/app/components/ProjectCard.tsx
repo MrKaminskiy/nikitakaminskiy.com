@@ -35,7 +35,7 @@ export default function ProjectCard({
     glow: `bg-custom-card border ${borderColor} ${
       isActive ? "hover:shadow-2xl hover:shadow-custom-accent/30 hover:scale-[1.02]" : ""
     }`,
-    shimmer: `bg-gradient-to-br from-custom-card to-custom-secondary/10 border ${borderColor} ${
+    shimmer: `bg-custom-card border ${borderColor} ${
       isActive ? "hover:shadow-xl hover:scale-[1.01]" : ""
     }`,
     "gradient-border": `bg-custom-card border ${borderColor} ${
@@ -49,9 +49,11 @@ export default function ProjectCard({
 
   const content = (
     <>
-      {/* Animated gradient background */}
+      {/* Animated gradient background - reduced for glow pattern */}
       <div
-        className={`absolute inset-0 opacity-0 group-hover:opacity-15 transition-opacity duration-500 ${gradient} blur-xl`}
+        className={`absolute inset-0 opacity-0 ${
+          pattern === "glow" ? "group-hover:opacity-[0.08]" : "group-hover:opacity-15"
+        } transition-opacity duration-500 ${gradient} blur-xl`}
       />
       
       {/* Shimmer effect for shimmer pattern */}
@@ -61,10 +63,10 @@ export default function ProjectCard({
         </div>
       )}
 
-      {/* Glow effect for glow pattern */}
+      {/* Glow effect for glow pattern - reduced opacity for better text readability */}
       {pattern === "glow" && (
         <div
-          className={`absolute -inset-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${gradient} blur-lg -z-10 rounded-2xl`}
+          className={`absolute -inset-1 opacity-0 group-hover:opacity-25 transition-opacity duration-500 ${gradient} blur-xl -z-10 rounded-2xl`}
         />
       )}
 
