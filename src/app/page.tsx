@@ -1,10 +1,11 @@
+import ProjectCard from "./components/ProjectCard";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-custom-primary text-custom-primary">
       <main className="flex flex-col lg:flex-row min-h-screen lg:h-screen">
         {/* Left Column - Personal Info (40% width on desktop, full width on mobile) */}
-        <div className="w-full lg:w-2/5 p-6 lg:p-12 flex flex-col justify-start space-y-4">
+        <div className="w-full lg:w-2/5 p-6 lg:p-12 flex flex-col justify-start space-y-6 border-r border-custom-border">
             {/* Mobile: Compact header with photo on right */}
             <div className="flex lg:hidden items-center gap-6 mb-4">
               <div className="flex-1">
@@ -22,7 +23,7 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-              <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+              <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-custom-accent/20">
                 <img
                   src="/images/profile.jpg"
                   alt="Nikita Kaminskiy"
@@ -34,7 +35,7 @@ export default function Home() {
             {/* Desktop: Original layout */}
             <div className="hidden lg:block">
               {/* Profile Photo */}
-              <div className="w-40 h-40 rounded-full overflow-hidden mb-6">
+              <div className="w-40 h-40 rounded-full overflow-hidden mb-6 ring-2 ring-custom-accent/20">
                 <img
                   src="/images/profile.jpg"
                   alt="Nikita Kaminskiy"
@@ -61,16 +62,16 @@ export default function Home() {
             </div>
 
             {/* Manifest */}
-            <p className="text-lg lg:text-xl italic text-custom-primary leading-relaxed">
+            <p className="text-lg lg:text-xl italic text-custom-secondary leading-relaxed border-l-2 border-custom-accent/30 pl-4">
               &ldquo;I automate business processes with AI to save time and money for SMBs.&rdquo;
             </p>
 
             {/* Stats */}
-            <div>
-              <p className="text-lg lg:text-xl font-semibold text-custom-primary">
-                15+ entrepreneurs automated their workflows:
+            <div className="bg-custom-card p-4 rounded-xl border border-custom-border">
+              <p className="text-lg lg:text-xl font-semibold text-custom-primary mb-2">
+                15+ entrepreneurs automated their workflows
               </p>
-              <p className="text-custom-primary mt-2 text-sm lg:text-base">
+              <p className="text-custom-secondary text-sm lg:text-base">
                 I help businesses find automation opportunities, implement AI solutions, and get profitable
               </p>
             </div>
@@ -134,122 +135,78 @@ export default function Home() {
                 </a>
               </div>
               {/* Divider line for mobile */}
-              <div className="w-full h-px bg-gray-300 mt-4 lg:hidden"></div>
+              <div className="w-full h-px bg-custom-border mt-4 lg:hidden"></div>
             </div>
           </div>
 
         {/* Right Column - Projects Grid (60% width on desktop, full width on mobile) */}
         <div className="w-full lg:w-3/5 overflow-y-auto p-6 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Project 1 - RecaPuccino */}
-          <a href="https://recapuccino-production.up.railway.app" target="_blank" rel="noopener noreferrer" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">☕</span>
-              </div>
-              <div className="font-bold text-custom-primary">RecaPuccino</div>
-            </div>
-            <div className="text-sm text-custom-primary">Movie recap generator powered by AI</div>
-          </a>
+            {/* Project 1 - annashe.art - Artist Portfolio */}
+            <ProjectCard
+              title="annashe.art"
+              description="Artist portfolio website showcasing creative works with elegant design and smooth animations"
+              href="https://annashe.art"
+              gradient="bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500"
+              icon="🎨"
+              iconBg="bg-gradient-to-br from-pink-500/20 to-purple-500/20"
+              borderColor="border-pink-500/30"
+            />
 
-          {/* Project 2 - OmniBoard */}
-          <a href="https://omni-board-front.vercel.app/" target="_blank" rel="noopener noreferrer" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">📊</span>
-              </div>
-              <div className="font-bold text-custom-primary">OmniBoard</div>
-            </div>
-            <div className="text-sm text-custom-primary">Crypto dashboard with market signals and journal</div>
-          </a>
+            {/* Project 2 - Omniboard - Crypto Signals */}
+            <ProjectCard
+              title="Omniboard"
+              description="Crypto signals dashboard with real-time market overview, trading journal, and analytics"
+              href="https://omni-board-front.vercel.app/"
+              gradient="bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500"
+              icon="📊"
+              iconBg="bg-gradient-to-br from-green-500/20 to-emerald-500/20"
+              borderColor="border-green-500/30"
+            />
 
-          {/* Project 3 */}
-          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">📈</span>
-              </div>
-              <div className="font-bold text-custom-primary">Отчетчик</div>
-            </div>
-            <div className="text-sm text-custom-primary">Excel to Google Sheets automation</div>
-          </a>
+            {/* Project 3 - Services I offer */}
+            <ProjectCard
+              title="Services"
+              description="Automation, Integration & ChatBots - Custom solutions to streamline your business processes"
+              href="#"
+              gradient="bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500"
+              icon="⚙️"
+              iconBg="bg-gradient-to-br from-blue-500/20 to-cyan-500/20"
+              borderColor="border-blue-500/30"
+            />
 
-          {/* Project 4 */}
-          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">🔗</span>
-              </div>
-              <div className="font-bold text-custom-primary">API Integration</div>
-            </div>
-            <div className="text-sm text-custom-primary">Custom API connections for businesses</div>
-          </a>
+            {/* Project 4 - BOOKWROOM Shop */}
+            <ProjectCard
+              title="BOOKWROOM Shop"
+              description="Curated collection of books and reading accessories. Visit our Etsy store for unique finds"
+              href="https://bookwroom.etsy.com"
+              gradient="bg-gradient-to-br from-amber-500 via-orange-500 to-red-500"
+              icon="📚"
+              iconBg="bg-gradient-to-br from-amber-500/20 to-orange-500/20"
+              borderColor="border-amber-500/30"
+            />
 
-          {/* Project 5 */}
-          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">⚡</span>
-              </div>
-              <div className="font-bold text-custom-primary">Workflow Automation</div>
-            </div>
-            <div className="text-sm text-custom-primary">Zapier and custom workflow solutions</div>
-          </a>
+            {/* Project 5 - Automated Newsletter */}
+            <ProjectCard
+              title="Automated Newsletter"
+              description="AI-powered newsletter system that curates, writes, and sends personalized content automatically"
+              href="#"
+              gradient="bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500"
+              icon="📧"
+              iconBg="bg-gradient-to-br from-violet-500/20 to-purple-500/20"
+              borderColor="border-violet-500/30"
+            />
 
-          {/* Project 6 */}
-          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">🗄️</span>
-              </div>
-              <div className="font-bold text-custom-primary">Database Sync</div>
-            </div>
-            <div className="text-sm text-custom-primary">Real-time data synchronization</div>
-          </a>
-
-          {/* Project 7 */}
-          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">💬</span>
-              </div>
-              <div className="font-bold text-custom-primary">Chatbot Integration</div>
-            </div>
-            <div className="text-sm text-custom-primary">AI-powered customer support</div>
-          </a>
-
-          {/* Project 8 */}
-          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">🕷️</span>
-              </div>
-              <div className="font-bold text-custom-primary">Web Scraping</div>
-            </div>
-            <div className="text-sm text-custom-primary">Automated data collection</div>
-          </a>
-
-          {/* Project 9 */}
-          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">🧠</span>
-              </div>
-              <div className="font-bold text-custom-primary">ML Pipeline</div>
-            </div>
-            <div className="text-sm text-custom-primary">Machine learning automation</div>
-          </a>
-
-          {/* Project 10 */}
-          <a href="#" className="group block bg-white p-4 rounded-2xl shadow-sm hover:shadow-lg hover:bg-gray-200 transition-all duration-200 cursor-pointer">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-gray-500 font-bold text-xs group-hover:translate-x-0.5 transition-transform duration-200">☁️</span>
-              </div>
-              <div className="font-bold text-custom-primary">Cloud Migration</div>
-            </div>
-            <div className="text-sm text-custom-primary">AWS/Azure infrastructure setup</div>
-          </a>
+            {/* Project 6 - Automated Content Collection */}
+            <ProjectCard
+              title="Content Automation"
+              description="Automated content collection and generation for Telegram, Threads, and YouTube channels"
+              href="#"
+              gradient="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500"
+              icon="🤖"
+              iconBg="bg-gradient-to-br from-indigo-500/20 to-blue-500/20"
+              borderColor="border-indigo-500/30"
+            />
           </div>
         </div>
       </main>
