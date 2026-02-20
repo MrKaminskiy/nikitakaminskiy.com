@@ -53,11 +53,11 @@ export default function Home() {
         <div className="hero-left">
           <div className="avail-badge">
             <div className="avail-dot"></div>
-            Taking new clients &mdash; Berlin &amp; Remote
+            2 spots left for Q2 &mdash; Berlin &amp; Remote
           </div>
 
           <div className="hero-eyebrow">
-            AI Consultant &middot; Automation Specialist
+            I build AI systems with my own money on the line
           </div>
 
           <h1 className="hero-title">
@@ -75,10 +75,9 @@ export default function Home() {
 
           <div className="hero-tags">
             <span className="tag amber">Berlin, DE</span>
-            <span className="tag">Process Automation</span>
-            <span className="tag">AI Agents</span>
-            <span className="tag">Executive Training</span>
-            <span className="tag">10+ Years in IT</span>
+            <span className="tag">Saved a CEO 3h/day in week 1</span>
+            <span className="tag">47 automations deployed</span>
+            <span className="tag">50+ AI tools tested live</span>
           </div>
 
           <div className="hero-actions">
@@ -88,10 +87,10 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Write on Telegram
+              Book free 15-min audit
             </a>
-            <a href="#services" className="btn-ghost">
-              See what I do{" "}
+            <a href="#proof" className="btn-ghost">
+              See proof{" "}
               <span style={{ color: "var(--amber)" }}>&rarr;</span>
             </a>
           </div>
@@ -171,29 +170,29 @@ export default function Home() {
       <div className="divider"></div>
       <div className="stats">
         <div className="stat-item reveal">
-          <div className="stat-num">10+</div>
-          <div className="stat-label">Years in IT &amp; Automation</div>
+          <div className="stat-num">3h</div>
+          <div className="stat-label">Saved per day for one CEO</div>
         </div>
         <div
           className="stat-item reveal"
           style={{ transitionDelay: "0.1s" }}
         >
-          <div className="stat-num">50+</div>
-          <div className="stat-label">AI Tools Tested</div>
+          <div className="stat-num">47</div>
+          <div className="stat-label">Automations deployed</div>
         </div>
         <div
           className="stat-item reveal"
           style={{ transitionDelay: "0.2s" }}
         >
-          <div className="stat-num">24/7</div>
-          <div className="stat-label">AI Running for Me</div>
+          <div className="stat-num">1 wk</div>
+          <div className="stat-label">Avg. time to first ROI</div>
         </div>
         <div
           className="stat-item reveal"
           style={{ transitionDelay: "0.3s" }}
         >
-          <div className="stat-num">$0</div>
-          <div className="stat-label">Learning Cost for You</div>
+          <div className="stat-num">15+</div>
+          <div className="stat-label">Businesses automated</div>
         </div>
       </div>
       <div className="divider"></div>
@@ -410,33 +409,30 @@ export default function Home() {
             </div>
             <div className="about-text reveal">
               <p>
-                Most AI consultants either come from academia or big tech. They
-                understand AI theoretically. I understand it{" "}
-                <span className="highlight">operationally</span> &mdash;
-                because I build and run AI systems every single day, as a hobby,
-                for fun.
+                Last month I deployed an email triage agent for a 12-person agency.
+                It cut their CEO&apos;s inbox time from{" "}
+                <span className="highlight">4 hours to 40 minutes</span>.
+                ROI hit in the first week. That&apos;s a real project, not a slide
+                deck.
               </p>
               <p>
-                I have a personal AI assistant running on my desk 24/7. I test
-                new AI tools the week they launch. I build trading bots with real
-                money on the line. I automate my own life before I automate
-                anyone else&apos;s. That&apos;s not a resume line &mdash;{" "}
+                I run a personal AI assistant on a Raspberry Pi on my desk &mdash;
+                connected to my calendar, messages, and tasks. I trade real money
+                with automated bots. I test new AI tools the week they launch.
+                That&apos;s not a resume line &mdash;{" "}
                 <strong>that&apos;s my Tuesday evening.</strong>
               </p>
               <p>
-                This obsession makes me unusually useful to executives who feel
-                the AI pressure but don&apos;t have time to wade through the
-                noise. I&apos;ve already done that. I know what actually works in
-                production, what&apos;s hype, and what{" "}
+                This means when you hire me, you&apos;re not getting someone who
+                read a whitepaper. You&apos;re getting someone who already broke
+                the tool, found the workaround, and knows exactly{" "}
                 <span className="highlight">
-                  specifically applies to your business
-                </span>{" "}
-                &mdash; not a generic use case.
+                  which 3 of the 50 AI tools actually matter for your business
+                </span>.
               </p>
               <p>
                 Based in <strong>Berlin</strong>. Work remotely with clients
-                across Europe. Fluent in English, Russian, and just enough German
-                to survive a Beh&ouml;rde appointment.
+                across Europe. Fluent in English and Russian.
               </p>
             </div>
           </div>
@@ -449,7 +445,7 @@ export default function Home() {
               <div className="info-block-title">{"// Engagement Options"}</div>
               <div className="info-row">
                 <span className="label">First contact</span>
-                <span className="value green">Free &middot; no pressure</span>
+                <span className="value green">Free 15-min audit</span>
               </div>
               <div className="info-row">
                 <span className="label">AI audit</span>
@@ -573,9 +569,9 @@ export default function Home() {
               marginBottom: "24px",
             }}
           >
-            Stop watching AI happen.
+            Free 15-min AI audit.
             <br />
-            <span style={{ color: "var(--amber)" }}>Start using it.</span>
+            <span style={{ color: "var(--amber)" }}>No pitch. Just answers.</span>
           </h2>
           <p
             style={{
@@ -586,9 +582,9 @@ export default function Home() {
               lineHeight: "1.7",
             }}
           >
-            Drop me a message on Telegram or email. No forms, no calls, no pitch
-            decks. Just tell me what your business does and where you feel the
-            friction &mdash; I&apos;ll respond with a clear first take.
+            Tell me what your business does and where the friction is.
+            I&apos;ll reply with 2&ndash;3 specific automations you can
+            implement this month &mdash; whether you hire me or not.
           </p>
           <div
             style={{
@@ -596,6 +592,7 @@ export default function Home() {
               gap: "16px",
               justifyContent: "center",
               flexWrap: "wrap",
+              alignItems: "center",
             }}
           >
             <a
@@ -605,14 +602,14 @@ export default function Home() {
               className="btn-outline"
               style={{ fontSize: "14px", padding: "16px 40px" }}
             >
-              Write on Telegram
+              Book free audit on Telegram
             </a>
             <a
               href="mailto:nik@nikitakaminskiy.com"
               className="btn-ghost"
               style={{ fontSize: "13px" }}
             >
-              or send an email &rarr;
+              or email me &rarr;
             </a>
           </div>
         </div>
