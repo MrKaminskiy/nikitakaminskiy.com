@@ -1,20 +1,37 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { JetBrains_Mono, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({
+const jetbrainsMono = JetBrains_Mono({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-mono",
+});
+
+const barlowCondensed = Barlow_Condensed({
+  weight: ["600", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
-  title: "Nikita Kaminskiy",
-  description: "I automate business processes with AI to save time and money for SMBs.",
+  title: "Nikita Kaminskiy — IT Lead & Builder",
+  description:
+    "AI Consultant & Automation Specialist. I help executives understand AI, adopt it, and turn it into a real competitive edge.",
   icons: {
     icon: [
-      { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      {
+        url: "/favicon_io/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/favicon_io/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
     ],
     shortcut: "/favicon_io/favicon.ico",
     apple: "/favicon_io/apple-touch-icon.png",
@@ -29,7 +46,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} antialiased`}>
+      <body
+        className={`${jetbrainsMono.variable} ${barlowCondensed.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

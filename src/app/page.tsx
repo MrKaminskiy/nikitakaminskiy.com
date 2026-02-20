@@ -1,322 +1,651 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import ProjectCard from "./components/ProjectCard";
-import ServiceModal from "./components/ServiceModal";
+import { useEffect } from "react";
 
 export default function Home() {
-  const [servicesModalOpen, setServicesModalOpen] = useState(false);
-  const [contentModalOpen, setContentModalOpen] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="min-h-screen bg-custom-primary text-custom-primary">
-      <main className="flex flex-col lg:flex-row min-h-screen lg:h-screen">
-        {/* Left Column - Personal Info (40% width on desktop, full width on mobile) */}
-        <div className="w-full lg:w-2/5 p-6 lg:p-12 flex flex-col justify-start space-y-6">
-            {/* Mobile: Compact header with photo on right */}
-            <div className="flex lg:hidden items-center gap-6 mb-4">
-              <div className="flex-1">
-                <h1 className="text-2xl font-bold mb-1">
-                  Nikita Kaminskiy
-                </h1>
-                <div className="flex items-center gap-4 text-sm">
-                  <span className="flex items-center gap-1">
-                    <span>📍</span>
-                    <span className="font-bold">Berlin</span>
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <span>🤖</span>
-                    <span className="font-bold">AI my ass</span>
-                  </span>
-                </div>
-              </div>
-              <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-custom-accent/20 relative">
-                <Image
-                  src="/images/profile.jpg"
-                  alt="Nikita Kaminskiy"
-                  fill
-                  className="object-cover scale-150"
-                  priority
-                />
-              </div>
-            </div>
+    <>
+      {/* NAV */}
+      <nav>
+        <a href="#" className="nav-logo">
+          nk<span>.com</span>
+        </a>
+        <div className="nav-links">
+          <a href="#services">Services</a>
+          <a href="#proof">Work</a>
+          <a href="#about">About</a>
+          <a
+            href="https://t.me/prophet0811"
+            className="nav-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Message me &rarr;
+          </a>
+        </div>
+      </nav>
 
-            {/* Desktop: Original layout */}
-            <div className="hidden lg:block">
-              {/* Profile Photo */}
-              <div className="w-40 h-40 rounded-full overflow-hidden mb-6 ring-2 ring-custom-accent/20 relative">
-                <Image
-                  src="/images/profile.jpg"
-                  alt="Nikita Kaminskiy"
-                  fill
-                  className="object-cover scale-150"
-                  priority
-                />
-              </div>
+      {/* HERO */}
+      <div className="hero">
+        <div
+          className="glow-orb"
+          style={{ top: "-100px", left: "-200px" }}
+        ></div>
 
-              {/* Name */}
-              <h1 className="text-4xl font-bold">
-                Nikita Kaminskiy
-              </h1>
-
-              {/* Location and Fun Fact */}
-              <div className="flex items-center gap-6">
-                <p className="text-custom-primary flex items-center gap-2">
-                  <span>📍</span>
-                  <span className="font-bold">Berlin</span>
-                </p>
-                <p className="text-custom-primary flex items-center gap-2">
-                  <span>🤖</span>
-                  <span className="font-bold">AI my ass</span>
-                </p>
-              </div>
-            </div>
-
-            {/* Manifest */}
-            <div className="text-lg lg:text-xl text-custom-secondary leading-relaxed border-l-2 border-custom-accent/30 pl-4 space-y-2">
-              <p className="font-semibold text-custom-primary">
-                Automating messy business processes with AI
-              </p>
-              <p className="text-sm lg:text-base">
-                CRM • ERP • Email • Ops
-              </p>
-              <p>
-                Save 10–30 hrs/week, fewer mistakes
-              </p>
-              <p className="italic">
-                Not theory — real implementation
-              </p>
-              <p className="text-custom-accent font-medium">
-                DM me
-              </p>
-            </div>
-
-            {/* Stats */}
-            <div className="bg-custom-card p-4 rounded-xl border border-custom-border">
-              <p className="text-lg lg:text-xl font-semibold text-custom-primary mb-2">
-                15+ entrepreneurs automated their workflows
-              </p>
-              <p className="text-custom-secondary text-sm lg:text-base">
-                I help businesses find automation opportunities, implement AI solutions, and get profitable
-              </p>
-            </div>
-
-            {/* Contact Section */}
-            <div className="pt-2">
-              <div className="flex justify-center lg:justify-start space-x-6">
-                <a
-                  href="mailto:nikam0811@gmail.com"
-                  className="text-custom-primary transition-colors duration-300 relative group"
-                  title="nikam0811@gmail.com"
-                >
-                  <svg className="w-6 h-6 relative z-10 group-hover:text-teal-400 group-hover:drop-shadow-[0_0_12px_rgba(45,212,191,0.8)] group-hover:scale-110 group-hover:animate-shake transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                  </svg>
-                </a>
-                <a
-                  href="https://t.me/prophet0811"
-                  className="text-custom-primary transition-colors duration-300 relative group"
-                  title="@prophet0811"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg className="w-6 h-6 relative z-10 group-hover:text-teal-400 group-hover:drop-shadow-[0_0_12px_rgba(45,212,191,0.8)] group-hover:scale-110 group-hover:animate-shake transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                  </svg>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/nikita-kaminskiy-58132424b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                  className="text-custom-primary transition-colors duration-300 relative group"
-                  title="LinkedIn Profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg className="w-6 h-6 relative z-10 group-hover:text-teal-400 group-hover:drop-shadow-[0_0_12px_rgba(45,212,191,0.8)] group-hover:scale-110 group-hover:animate-shake transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-                <a
-                  href="https://twitter.com/T0NBigBrain"
-                  className="text-custom-primary transition-colors duration-300 relative group"
-                  title="@T0NBigBrain"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg className="w-6 h-6 relative z-10 group-hover:text-teal-400 group-hover:drop-shadow-[0_0_12px_rgba(45,212,191,0.8)] group-hover:scale-110 group-hover:animate-shake transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                  </svg>
-                </a>
-                <a
-                  href="https://github.com/MrKaminskiy"
-                  className="text-custom-primary transition-colors duration-300 relative group"
-                  title="GitHub Profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg className="w-6 h-6 relative z-10 group-hover:text-teal-400 group-hover:drop-shadow-[0_0_12px_rgba(45,212,191,0.8)] group-hover:scale-110 group-hover:animate-shake transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                  </svg>
-                </a>
-              </div>
-              {/* Divider line for mobile */}
-              <div className="w-full h-px bg-custom-border mt-4 lg:hidden"></div>
-            </div>
+        <div className="hero-left">
+          <div className="avail-badge">
+            <div className="avail-dot"></div>
+            Taking new clients &mdash; Berlin &amp; Remote
           </div>
 
-        {/* Right Column - Projects Grid (60% width on desktop, full width on mobile) */}
-        <div className="w-full lg:w-3/5 overflow-y-auto p-6 lg:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Project 1 - annashe.art - Artist Portfolio */}
-            <ProjectCard
-              title="annashe.art"
-              description="Artist portfolio website showcasing creative works with elegant design and smooth animations"
-              href="https://annashe.art"
-              gradient="bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500"
-              icon={
-                <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
-              }
-              iconBg="bg-gradient-to-br from-pink-500/30 to-purple-500/30"
-              borderColor="border-pink-500/40"
-              pattern="shimmer"
-            />
+          <div className="hero-eyebrow">
+            AI Consultant &middot; Automation Specialist
+          </div>
 
-            {/* Project 2 - Omniboard - Crypto Signals */}
-            <ProjectCard
-              title="Omniboard"
-              description="Crypto signals dashboard with real-time market overview, trading journal, and analytics"
-              href="https://omni-board-front.vercel.app/"
-              gradient="bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500"
-              icon={
-                <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              }
-              iconBg="bg-gradient-to-br from-green-500/30 to-emerald-500/30"
-              borderColor="border-green-500/40"
-              pattern="glow"
-            />
+          <h1 className="hero-title">
+            <span className="first">NIKITA</span>
+            <span className="last">KAMINSKIY</span>
+          </h1>
 
-            {/* Project 3 - Services I offer */}
-            <ProjectCard
-              title="Services"
-              description="Automation, Integration & ChatBots - Custom solutions to streamline your business processes"
-              href="#"
-              gradient="bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500"
-              icon={
-                <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              }
-              iconBg="bg-gradient-to-br from-blue-500/30 to-cyan-500/30"
-              borderColor="border-blue-500/40"
-              pattern="gradient-border"
-              onClick={() => setServicesModalOpen(true)}
-            />
+          <p className="hero-subtitle">
+            Your competitors are already using AI.
+            <br />
+            I help executives understand it, adopt it, and
+            <br />
+            turn it into a real competitive edge &mdash; fast.
+          </p>
 
-            {/* Project 4 - BOOKWROOM Shop */}
-            <ProjectCard
-              title="BOOKWROOM Shop"
-              description="Curated collection of books and reading accessories. Visit our Etsy store for unique finds"
-              href="https://bookwroom.etsy.com"
-              gradient="bg-gradient-to-br from-amber-500 via-orange-500 to-red-500"
-              icon={
-                <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              }
-              iconBg="bg-gradient-to-br from-amber-500/30 to-orange-500/30"
-              borderColor="border-amber-500/40"
-              pattern="shimmer"
-            />
+          <div className="hero-tags">
+            <span className="tag amber">Berlin, DE</span>
+            <span className="tag">Process Automation</span>
+            <span className="tag">AI Agents</span>
+            <span className="tag">Executive Training</span>
+            <span className="tag">10+ Years in IT</span>
+          </div>
 
-            {/* Project 5 - Automated Newsletter */}
-            <ProjectCard
-              title="Automated Newsletter"
-              description="AI-powered newsletter system that curates, writes, and sends personalized content automatically"
-              href="#"
-              gradient="bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500"
-              icon={
-                <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              }
-              iconBg="bg-gradient-to-br from-violet-500/30 to-purple-500/30"
-              borderColor="border-violet-500/40"
-              pattern="glow"
-            />
-
-            {/* Project 6 - Automated Content Collection */}
-            <ProjectCard
-              title="Content Automation"
-              description="Automated content collection and generation for Telegram, Threads, and YouTube channels"
-              href="#"
-              gradient="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500"
-              icon={
-                <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              }
-              iconBg="bg-gradient-to-br from-indigo-500/30 to-blue-500/30"
-              borderColor="border-indigo-500/40"
-              pattern="gradient-border"
-              onClick={() => setContentModalOpen(true)}
-            />
+          <div className="hero-actions">
+            <a
+              href="https://t.me/prophet0811"
+              className="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Write on Telegram
+            </a>
+            <a href="#services" className="btn-ghost">
+              See what I do{" "}
+              <span style={{ color: "var(--amber)" }}>&rarr;</span>
+            </a>
           </div>
         </div>
-      </main>
 
-      {/* Services Modal */}
-      <ServiceModal
-        isOpen={servicesModalOpen}
-        onClose={() => setServicesModalOpen(false)}
-        title="Services"
-        description="I help businesses automate their workflows, integrate systems, and implement AI-powered solutions to save time and reduce errors."
-        services={[
-          "Workflow Automation",
-          "API Integration",
-          "ChatBots & AI Assistants",
-          "CRM/ERP Automation",
-          "Email Automation",
-          "Data Synchronization",
-        ]}
-        benefits={[
-          "Save 10-30 hours per week by automating repetitive tasks",
-          "Reduce human errors with automated processes",
-          "Improve efficiency and productivity across your team",
-          "Custom solutions tailored to your specific needs",
-          "Real implementation, not just theory",
-        ]}
-        gradient="linear-gradient(135deg, #3b82f6, #06b6d4, #14b8a6)"
-      />
+        {/* TERMINAL */}
+        <div className="terminal-widget">
+          <div className="term-header">
+            <div className="term-dots">
+              <div className="term-dot dot-red"></div>
+              <div className="term-dot dot-yellow"></div>
+              <div className="term-dot dot-green"></div>
+            </div>
+            <div className="term-title">~/nik-brain &mdash; zsh</div>
+          </div>
+          <div className="term-body">
+            <div className="term-line">
+              <span className="term-time">08:47:03</span>
+              <span className="term-prompt">~</span>
+              <span className="term-cmd"> ai-tools --latest</span>
+            </div>
+            <div className="term-output">
+              <span className="ok">&uarr;</span> Claude 4 &middot; GPT-5
+              &middot; Gemini 3
+              <br />
+              <span className="ok">&uarr;</span> OpenClaw &middot; Cursor
+              &middot; MCP agents
+              <br />
+              <span className="muted">Testing 6 new tools this week...</span>
+            </div>
 
-      {/* Content Automation Modal */}
-      <ServiceModal
-        isOpen={contentModalOpen}
-        onClose={() => setContentModalOpen(false)}
-        title="Content Automation"
-        description="Automated content collection, curation, and generation system for multiple social media platforms and communication channels."
-        services={[
-          "Telegram Channel Automation",
-          "Threads Content Generation",
-          "YouTube Content Curation",
-          "Multi-platform Publishing",
-          "AI Content Creation",
-          "Content Scheduling",
-        ]}
-        benefits={[
-          "Automatically collect and curate content from multiple sources",
-          "Generate AI-powered content tailored to your audience",
-          "Schedule and publish across multiple platforms simultaneously",
-          "Maintain consistent brand voice across all channels",
-          "Save hours of manual content creation and posting",
-        ]}
-        gradient="linear-gradient(135deg, #6366f1, #3b82f6, #06b6d4)"
-      />
-    </div>
+            <div className="term-line">
+              <span className="term-time">09:02:14</span>
+              <span className="term-prompt">~</span>
+              <span className="term-cmd">
+                {" "}
+                automate --client &quot;inbox&quot;
+              </span>
+            </div>
+            <div className="term-output">
+              <span className="ok">&#10003;</span> Email triage agent deployed
+              <br />
+              <span className="ok">&#10003;</span> Saved ~3h/day for CEO
+              <br />
+              <span className="muted">ROI: first week</span>
+            </div>
+
+            <div className="term-line">
+              <span className="term-time">09:15:51</span>
+              <span className="term-prompt">~</span>
+              <span className="term-cmd"> status --consulting</span>
+            </div>
+            <div className="term-output">
+              <span className="ok">&#10003;</span> Berlin, DE{" "}
+              <span className="muted">(UTC+1)</span>
+              <br />
+              <span className="ok">&#10003;</span> Available for new clients
+              <br />
+              <span className="muted">Response time: &lt; 24h</span>
+            </div>
+
+            <div className="term-line" style={{ marginTop: "8px" }}>
+              <span className="term-time">09:16:02</span>
+              <span className="term-prompt" style={{ color: "var(--amber)" }}>
+                ~/consulting
+              </span>
+              <span className="term-cmd">
+                {" "}
+                _<span className="term-cursor"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* STATS */}
+      <div className="divider"></div>
+      <div className="stats">
+        <div className="stat-item reveal">
+          <div className="stat-num">10+</div>
+          <div className="stat-label">Years in IT &amp; Automation</div>
+        </div>
+        <div
+          className="stat-item reveal"
+          style={{ transitionDelay: "0.1s" }}
+        >
+          <div className="stat-num">50+</div>
+          <div className="stat-label">AI Tools Tested</div>
+        </div>
+        <div
+          className="stat-item reveal"
+          style={{ transitionDelay: "0.2s" }}
+        >
+          <div className="stat-num">24/7</div>
+          <div className="stat-label">AI Running for Me</div>
+        </div>
+        <div
+          className="stat-item reveal"
+          style={{ transitionDelay: "0.3s" }}
+        >
+          <div className="stat-num">$0</div>
+          <div className="stat-label">Learning Cost for You</div>
+        </div>
+      </div>
+      <div className="divider"></div>
+
+      {/* SERVICES */}
+      <section id="services">
+        <div className="section-header reveal">
+          <h2 className="section-title">
+            What I <span>Do For You</span>
+          </h2>
+          <a
+            href="https://t.me/prophet0811"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="section-link"
+          >
+            Let&apos;s talk &rarr;
+          </a>
+        </div>
+
+        <div
+          className="skills-grid"
+          style={{ gridTemplateColumns: "repeat(2,1fr)" }}
+        >
+          <div className="skill-card reveal">
+            <div className="skill-icon">&#9881;&#65039;</div>
+            <div className="skill-name">Process Automation</div>
+            <div className="skill-desc">
+              We map your most repetitive, time-consuming workflows &mdash;
+              reporting, inbox triage, data entry, approvals &mdash; and replace
+              them with AI agents that work around the clock. Your team stops
+              doing robot work and starts doing human work.
+            </div>
+          </div>
+          <div
+            className="skill-card reveal"
+            style={{ transitionDelay: "0.1s" }}
+          >
+            <div className="skill-icon">&#129504;</div>
+            <div className="skill-name">AI Strategy &amp; Training</div>
+            <div className="skill-desc">
+              Hands-on sessions for you and your leadership team. No buzzwords,
+              no theory. I show you exactly which AI tools are relevant to your
+              business, how to use them effectively, and how to build a culture
+              of AI-first thinking inside your company.
+            </div>
+          </div>
+          <div
+            className="skill-card reveal"
+            style={{ transitionDelay: "0.15s" }}
+          >
+            <div className="skill-icon">&#129302;</div>
+            <div className="skill-name">Custom AI Agents</div>
+            <div className="skill-desc">
+              Need an agent that handles customer inquiries, qualifies leads,
+              monitors competitors, or generates weekly reports? I build
+              purpose-built AI agents tailored to your specific business &mdash;
+              deployed, tested, and handed over to your team.
+            </div>
+          </div>
+          <div
+            className="skill-card reveal"
+            style={{ transitionDelay: "0.2s" }}
+          >
+            <div className="skill-icon">&#128640;</div>
+            <div className="skill-name">AI-Augmented Teams</div>
+            <div className="skill-desc">
+              Instead of replacing people, we amplify them. I identify where each
+              of your team members loses the most time and build AI co-pilots for
+              those tasks &mdash; so one person does the work of three without
+              burning out.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider"></div>
+
+      {/* PROOF */}
+      <section id="proof">
+        <div className="section-header reveal">
+          <h2 className="section-title">
+            Proof of <span>Depth</span>
+          </h2>
+          <span
+            className="section-link"
+            style={{ color: "var(--text-muted)", cursor: "default" }}
+          >
+            Personal projects that prove I live in this world
+          </span>
+        </div>
+
+        <div className="projects-grid">
+          <a href="#" className="project-card reveal">
+            <div className="project-top">
+              <div className="project-icon">&#129302;</div>
+              <div className="project-arrow">&nearr;</div>
+            </div>
+            <div className="project-path">
+              $ <span>./built/</span>personal-ai-assistant
+            </div>
+            <div className="project-name">AI Personal OS</div>
+            <div className="project-desc">
+              Runs on a Raspberry Pi on my desk. Connects to my calendar,
+              messages, notes, and tasks. Monitors projects, sends proactive
+              updates, and executes multi-step workflows &mdash; all from a
+              Telegram chat. This is what I build for clients, but for myself
+              first.
+            </div>
+            <div className="project-meta">
+              <span className="project-tag highlight">OpenClaw</span>
+              <span className="project-tag highlight">Claude API</span>
+              <span className="project-tag">Self-hosted</span>
+              <span className="project-tag">Always running</span>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            className="project-card reveal"
+            style={{ transitionDelay: "0.1s" }}
+          >
+            <div className="project-top">
+              <div className="project-icon">&#128200;</div>
+              <div className="project-arrow">&nearr;</div>
+            </div>
+            <div className="project-path">
+              $ <span>./built/</span>trading-automation
+            </div>
+            <div className="project-name">Trading Bots</div>
+            <div className="project-desc">
+              Automated trading tools I use with real money &mdash; prediction
+              market arbitrage, Telegram signal analysis, bridge monitoring.
+              Every system is live in production, not a demo. I only build things
+              I trust enough to use myself.
+            </div>
+            <div className="project-meta">
+              <span className="project-tag highlight">Python</span>
+              <span className="project-tag highlight">Real P&amp;L</span>
+              <span className="project-tag">Polymarket</span>
+              <span className="project-tag">Automated 24/7</span>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            className="project-card reveal"
+            style={{ transitionDelay: "0.15s" }}
+          >
+            <div className="project-top">
+              <div className="project-icon">&#8986;</div>
+              <div className="project-arrow">&nearr;</div>
+            </div>
+            <div className="project-path">
+              $ <span>./built/</span>garmin-watch-faces
+            </div>
+            <div className="project-name">Digital Nostalgia</div>
+            <div className="project-desc">
+              A published collection of retro-aesthetic Garmin watch faces on the
+              Connect IQ store. Because side projects should ship. Proves that I
+              take things from idea to finished product &mdash; not just
+              prototypes.
+            </div>
+            <div className="project-meta">
+              <span className="project-tag highlight">Connect IQ</span>
+              <span className="project-tag">Published</span>
+              <span className="project-tag">Product Design</span>
+              <span className="project-tag">Monkey C</span>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            className="project-card reveal"
+            style={{ transitionDelay: "0.2s" }}
+          >
+            <div className="project-top">
+              <div className="project-icon">&#128424;</div>
+              <div className="project-arrow">&nearr;</div>
+            </div>
+            <div className="project-path">
+              $ <span>./built/</span>physical-products
+            </div>
+            <div className="project-name">3D Product Business</div>
+            <div className="project-desc">
+              Design, print, sell. Running an Etsy shop with 3D-printed products
+              from my Bambu P1P. End-to-end ownership of a physical product
+              business. I understand both the digital and operational sides of
+              running something real.
+            </div>
+            <div className="project-meta">
+              <span className="project-tag highlight">Bambu P1P</span>
+              <span className="project-tag">Etsy</span>
+              <span className="project-tag">Product ops</span>
+              <span className="project-tag">E-commerce</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <div className="divider"></div>
+
+      {/* ABOUT */}
+      <section id="about">
+        <div className="about-grid">
+          <div>
+            <div
+              className="section-header reveal"
+              style={{ marginBottom: "32px" }}
+            >
+              <h2 className="section-title">
+                Why <span>Me</span>
+              </h2>
+            </div>
+            <div className="about-text reveal">
+              <p>
+                Most AI consultants either come from academia or big tech. They
+                understand AI theoretically. I understand it{" "}
+                <span className="highlight">operationally</span> &mdash;
+                because I build and run AI systems every single day, as a hobby,
+                for fun.
+              </p>
+              <p>
+                I have a personal AI assistant running on my desk 24/7. I test
+                new AI tools the week they launch. I build trading bots with real
+                money on the line. I automate my own life before I automate
+                anyone else&apos;s. That&apos;s not a resume line &mdash;{" "}
+                <strong>that&apos;s my Tuesday evening.</strong>
+              </p>
+              <p>
+                This obsession makes me unusually useful to executives who feel
+                the AI pressure but don&apos;t have time to wade through the
+                noise. I&apos;ve already done that. I know what actually works in
+                production, what&apos;s hype, and what{" "}
+                <span className="highlight">
+                  specifically applies to your business
+                </span>{" "}
+                &mdash; not a generic use case.
+              </p>
+              <p>
+                Based in <strong>Berlin</strong>. Work remotely with clients
+                across Europe. Fluent in English, Russian, and just enough German
+                to survive a Beh&ouml;rde appointment.
+              </p>
+            </div>
+          </div>
+
+          <div
+            className="about-sidebar reveal"
+            style={{ transitionDelay: "0.2s" }}
+          >
+            <div className="info-block">
+              <div className="info-block-title">{"// Engagement Options"}</div>
+              <div className="info-row">
+                <span className="label">First contact</span>
+                <span className="value green">Free &middot; no pressure</span>
+              </div>
+              <div className="info-row">
+                <span className="label">AI audit</span>
+                <span className="value amber">1-day workshop</span>
+              </div>
+              <div className="info-row">
+                <span className="label">Build &amp; deploy</span>
+                <span className="value">Project-based</span>
+              </div>
+              <div className="info-row">
+                <span className="label">Retainer</span>
+                <span className="value">Monthly advisory</span>
+              </div>
+            </div>
+
+            <div className="info-block">
+              <div className="info-block-title">{"// Good Fit If You..."}</div>
+              <div className="info-row">
+                <span className="label" style={{ color: "var(--green)" }}>
+                  &#10003;
+                </span>
+                <span className="value" style={{ fontSize: "11px" }}>
+                  Run a business with repetitive workflows
+                </span>
+              </div>
+              <div className="info-row">
+                <span className="label" style={{ color: "var(--green)" }}>
+                  &#10003;
+                </span>
+                <span className="value" style={{ fontSize: "11px" }}>
+                  Feel AI FOMO but don&apos;t know where to start
+                </span>
+              </div>
+              <div className="info-row">
+                <span className="label" style={{ color: "var(--green)" }}>
+                  &#10003;
+                </span>
+                <span className="value" style={{ fontSize: "11px" }}>
+                  Want results, not a PowerPoint strategy
+                </span>
+              </div>
+              <div className="info-row">
+                <span className="label" style={{ color: "var(--text-muted)" }}>
+                  &#10007;
+                </span>
+                <span
+                  className="value"
+                  style={{ fontSize: "11px", color: "var(--text-muted)" }}
+                >
+                  Looking for an hourly dev for bug fixes
+                </span>
+              </div>
+            </div>
+
+            <div className="info-block">
+              <div className="info-block-title">{"// Contact"}</div>
+              <div className="info-row">
+                <span className="label">Telegram</span>
+                <a
+                  href="https://t.me/prophet0811"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "var(--amber)",
+                    textDecoration: "none",
+                    fontSize: "12px",
+                  }}
+                >
+                  @prophet0811
+                </a>
+              </div>
+              <div className="info-row">
+                <span className="label">Email</span>
+                <a
+                  href="mailto:nik@nikitakaminskiy.com"
+                  style={{
+                    color: "var(--text)",
+                    textDecoration: "none",
+                    fontSize: "12px",
+                  }}
+                >
+                  nik@nikitakaminskiy.com
+                </a>
+              </div>
+              <div className="info-row">
+                <span className="label">Location</span>
+                <span className="value">Berlin, DE &middot; Remote OK</span>
+              </div>
+              <div className="info-row">
+                <span className="label">Response</span>
+                <span className="value green">Within 24h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <div className="divider"></div>
+      <section style={{ textAlign: "center", padding: "100px 40px" }}>
+        <div className="reveal">
+          <div
+            style={{
+              fontSize: "11px",
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "var(--amber)",
+              marginBottom: "20px",
+            }}
+          >
+            {"// Next step"}
+          </div>
+          <h2
+            style={{
+              fontFamily: "var(--font-display), 'Barlow Condensed', sans-serif",
+              fontSize: "clamp(36px,5vw,64px)",
+              fontWeight: 900,
+              textTransform: "uppercase",
+              lineHeight: "0.95",
+              letterSpacing: "-0.5px",
+              marginBottom: "24px",
+            }}
+          >
+            Stop watching AI happen.
+            <br />
+            <span style={{ color: "var(--amber)" }}>Start using it.</span>
+          </h2>
+          <p
+            style={{
+              fontSize: "14px",
+              color: "var(--text-dim)",
+              maxWidth: "480px",
+              margin: "0 auto 40px",
+              lineHeight: "1.7",
+            }}
+          >
+            Drop me a message on Telegram or email. No forms, no calls, no pitch
+            decks. Just tell me what your business does and where you feel the
+            friction &mdash; I&apos;ll respond with a clear first take.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              gap: "16px",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <a
+              href="https://t.me/prophet0811"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+              style={{ fontSize: "14px", padding: "16px 40px" }}
+            >
+              Write on Telegram
+            </a>
+            <a
+              href="mailto:nik@nikitakaminskiy.com"
+              className="btn-ghost"
+              style={{ fontSize: "13px" }}
+            >
+              or send an email &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <div className="divider"></div>
+      <footer>
+        <div>
+          <div className="footer-name">nikitakaminskiy.com</div>
+          <div className="footer-role">
+            AI Consultant &middot; Automation &middot; Berlin
+          </div>
+          <div className="footer-copy">
+            &copy; 2026 Nikita Kaminskiy
+          </div>
+        </div>
+        <div>
+          <div className="footer-links">
+            <a href="#services">Services</a>
+            <a href="#proof">Work</a>
+            <a href="#about">About</a>
+            <a href="mailto:nik@nikitakaminskiy.com">Email</a>
+            <a
+              href="https://t.me/prophet0811"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Telegram
+            </a>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
