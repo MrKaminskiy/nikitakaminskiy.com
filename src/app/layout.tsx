@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Barlow_Condensed } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -49,6 +50,12 @@ export default function RootLayout({
       <body
         className={`${jetbrainsMono.variable} ${barlowCondensed.variable} antialiased`}
       >
+        <Script
+          defer
+          src="https://analytics.120987346.xyz/script.js"
+          data-website-id="dbce534d-1496-4440-9bf3-ba1ab10ceeda"
+          strategy="afterInteractive"
+        />
         {children}
       </body>
     </html>
