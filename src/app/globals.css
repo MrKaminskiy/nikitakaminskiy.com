@@ -126,6 +126,24 @@ nav {
   background: #e62222 !important;
 }
 
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 1px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
 /* -- HERO -- */
 .hero {
   min-height: 100vh;
@@ -710,7 +728,7 @@ footer {
 /* -- SKILLS SECTION -- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   border: 1px solid var(--border);
   background: var(--border);
@@ -774,35 +792,113 @@ footer {
 }
 
 @media (max-width: 900px) {
+  /* NAV */
+  nav {
+    padding: 0 20px;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(13, 13, 11, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px;
+    gap: 0;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+  .nav-cta {
+    margin-top: 8px;
+    text-align: center;
+    display: block !important;
+  }
+
+  /* HERO */
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 90px;
+    padding: 90px 20px 40px;
+    gap: 24px;
   }
   .terminal-widget {
-    display: none;
+    font-size: 11px;
   }
+  .term-body {
+    padding: 14px;
+    font-size: 11px;
+  }
+  .term-time {
+    font-size: 9px;
+  }
+
+  /* STATS */
   .stats {
     grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .stat-item {
+    padding: 16px;
+    border-right: none;
+    background: var(--bg);
+  }
+  .stat-num {
+    font-size: 32px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 60px 20px;
+  }
+  .section-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .section-title {
+    font-size: 32px;
+  }
+
+  /* GRIDS */
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
+
+  /* ABOUT */
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
-  nav {
-    padding: 0 20px;
-  }
-  .nav-links {
-    gap: 16px;
-  }
-  section {
-    padding: 60px 20px;
-  }
+
+  /* FOOTER */
   footer {
     grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  .footer-name {
+    font-size: 24px;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 12px 20px;
   }
 }

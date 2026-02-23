@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,15 +30,25 @@ export default function Home() {
         <a href="#" className="nav-logo">
           nk<span>.com</span>
         </a>
-        <div className="nav-links">
-          <a href="#services">Services</a>
-          <a href="#proof">Work</a>
-          <a href="#about">About</a>
+        <button
+          className="nav-hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <div className={`nav-links${menuOpen ? " open" : ""}`}>
+          <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+          <a href="#proof" onClick={() => setMenuOpen(false)}>Work</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a
             href="https://t.me/prophet0811"
             className="nav-cta"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
           >
             Message me &rarr;
           </a>
@@ -66,11 +78,8 @@ export default function Home() {
           </h1>
 
           <p className="hero-subtitle">
-            Your competitors are already using AI.
-            <br />
-            I help executives understand it, adopt it, and
-            <br />
-            turn it into a real competitive edge &mdash; fast.
+            Your competitors are already using AI. I help executives understand
+            it, adopt it, and turn it into a real competitive edge &mdash; fast.
           </p>
 
           <div className="hero-tags">
@@ -213,10 +222,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div
-          className="skills-grid"
-          style={{ gridTemplateColumns: "repeat(2,1fr)" }}
-        >
+        <div className="skills-grid">
           <div className="skill-card reveal">
             <div className="skill-icon">&#9881;&#65039;</div>
             <div className="skill-name">Process Automation</div>
