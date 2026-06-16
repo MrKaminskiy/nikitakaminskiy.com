@@ -18,9 +18,25 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Nikita Kaminskiy — IT Lead & Builder",
+  metadataBase: new URL("https://nikitakaminskiy.com"),
+  title: "Nikita Kaminskiy — AI Consultant & Automation Specialist",
   description:
-    "AI Consultant & Automation Specialist. I help executives understand AI, adopt it, and turn it into a real competitive edge.",
+    "AI Consultant & Automation Specialist in Berlin. I help executives understand AI, adopt it, and turn it into a real competitive edge — fast.",
+  openGraph: {
+    type: "website",
+    url: "https://nikitakaminskiy.com",
+    siteName: "Nikita Kaminskiy",
+    title: "Nikita Kaminskiy — AI Consultant & Automation Specialist",
+    description:
+      "I help executives understand AI, adopt it, and turn it into a real competitive edge — fast. Based in Berlin, working remotely across Europe.",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nikita Kaminskiy — AI Consultant & Automation Specialist",
+    description:
+      "I help executives turn AI into a real competitive edge — fast. Berlin & Remote.",
+  },
   icons: {
     icon: [
       {

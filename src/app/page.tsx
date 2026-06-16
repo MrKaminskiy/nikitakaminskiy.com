@@ -292,10 +292,9 @@ export default function Home() {
         </div>
 
         <div className="projects-grid">
-          <a href="#" className="project-card reveal">
+          <div className="project-card reveal">
             <div className="project-top">
               <div className="project-icon">&#129302;</div>
-              <div className="project-arrow">&nearr;</div>
             </div>
             <div className="project-path">
               $ <span>./built/</span>personal-ai-assistant
@@ -314,16 +313,14 @@ export default function Home() {
               <span className="project-tag">Self-hosted</span>
               <span className="project-tag">Always running</span>
             </div>
-          </a>
+          </div>
 
-          <a
-            href="#"
+          <div
             className="project-card reveal"
             style={{ transitionDelay: "0.1s" }}
           >
             <div className="project-top">
               <div className="project-icon">&#128200;</div>
-              <div className="project-arrow">&nearr;</div>
             </div>
             <div className="project-path">
               $ <span>./built/</span>trading-automation
@@ -341,16 +338,14 @@ export default function Home() {
               <span className="project-tag">Polymarket</span>
               <span className="project-tag">Automated 24/7</span>
             </div>
-          </a>
+          </div>
 
-          <a
-            href="#"
+          <div
             className="project-card reveal"
             style={{ transitionDelay: "0.15s" }}
           >
             <div className="project-top">
               <div className="project-icon">&#8986;</div>
-              <div className="project-arrow">&nearr;</div>
             </div>
             <div className="project-path">
               $ <span>./built/</span>garmin-watch-faces
@@ -368,16 +363,14 @@ export default function Home() {
               <span className="project-tag">Product Design</span>
               <span className="project-tag">Monkey C</span>
             </div>
-          </a>
+          </div>
 
-          <a
-            href="#"
+          <div
             className="project-card reveal"
             style={{ transitionDelay: "0.2s" }}
           >
             <div className="project-top">
               <div className="project-icon">&#128424;</div>
-              <div className="project-arrow">&nearr;</div>
             </div>
             <div className="project-path">
               $ <span>./built/</span>physical-products
@@ -395,7 +388,7 @@ export default function Home() {
               <span className="project-tag">Product ops</span>
               <span className="project-tag">E-commerce</span>
             </div>
-          </a>
+          </div>
         </div>
       </section>
 
