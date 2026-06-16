@@ -526,14 +526,14 @@ export default function Home() {
               <div className="info-row">
                 <span className="label">Email</span>
                 <a
-                  href="mailto:nik@nikitakaminskiy.com"
+                  href="mailto:nikam0811@gmail.com"
                   style={{
                     color: "var(--text)",
                     textDecoration: "none",
                     fontSize: "12px",
                   }}
                 >
-                  nik@nikitakaminskiy.com
+                  nikam0811@gmail.com
                 </a>
               </div>
               <div className="info-row">
@@ -611,7 +611,7 @@ export default function Home() {
               Book free audit on Telegram
             </a>
             <a
-              href="mailto:nik@nikitakaminskiy.com"
+              href="mailto:nikam0811@gmail.com"
               className="btn-ghost"
               style={{ fontSize: "13px" }}
             >
@@ -638,7 +638,7 @@ export default function Home() {
             <a href="#services">Services</a>
             <a href="#proof">Work</a>
             <a href="#about">About</a>
-            <a href="mailto:nik@nikitakaminskiy.com">Email</a>
+            <a href="mailto:nikam0811@gmail.com">Email</a>
             <a
               href="https://t.me/prophet0811"
               target="_blank"
